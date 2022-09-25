@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Александр Попов](https://up.htmlacademy.ru/htmlcss/35/user/1632515).
-* Наставник: `Неизвестно`.
+- Студент: [Александр Попов](https://up.htmlacademy.ru/htmlcss/35/user/1632515).
+- Наставник: [Николай Колганов](https://htmlacademy.ru/profile/id794007).
 
 ---
 

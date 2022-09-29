@@ -122,15 +122,16 @@
       </ul>
     </fieldset>
     <!--RANGE-->
-    <section>
+    <fieldset class="range_filter_group">
+      <legend class="range_filter_title">Стоимость, ₽:</legend>
       <h2 class="visually_hidden">Диапазон цены</h2>
-        <form class="range" action="https://echo.htmlacademy.ru/" >
-          <input type="range" class="range_slider" min="0" max="9000">
-      </form>
-      </section>
+            <input type="number" class="range_numder_min" min="0" max="9000" step="1" value="0">
+          <input type="number" class="range_numder_max" min="0" max="9000" step="1" value="9000">
+          <input type="range"  class="range_slider" min="0" max="9000">
+      </fieldset>
 
       <button class="button apply" type="submit">Применить</button>
-      <button class="button reset" type="submit">Сбросить</button>
+      <button class="button reset" type="reset">Сбросить</button>
     </form>
 <!--Сортировка-->
     <select class="select_control" aria-label="Сортировка">
@@ -212,23 +213,23 @@
     </ul>
 <!--PAGINATION-->
     <ul class="pagination">
-      <li class="pagination-item">
-        <a class="pagination-link pagination-current">1</a>
+      <li class="pagination_item">
+        <a class="pagination_link pagination_current">1</a>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">2</a>
+      <li class="pagination_item">
+        <a class="pagination_link" href="#">2</a>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">3</a>
+      <li class="pagination_item">
+        <a class="pagination_link" href="#">3</a>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">4</a>
+      <li class="pagination_item">
+        <a class="pagination_link" href="#">4</a>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link" >...</a>
+      <li class="pagination_item">
+        <span class="pagination_dots" >...</span>
       </li>
-      <li class="pagination-item">
-        <a class="pagination-link" href="#">10</a>
+      <li class="pagination_item">
+        <a class="pagination_link" href="#">10</a>
       </li>
     </ul>
   </section>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Гостиницы Седона</title>
 </head>
 <body>
@@ -66,11 +67,14 @@
           <img class="breadcrumbs_item_img" src="img/svg/icon/breadcrumb/home.svg"  width="13" height="15" alt="дом" >
         </a>
       </li>
-            <li class="breadcrumbs-item">
+      <li class="breadcrumbs_item">
+        <img src="img/svg/icon/breadcrumb/arrow.svg" alt="cтрелка">
+      </li>
+            <li class="breadcrumbs_item">
         <a class="breadcrumbs-link">Гостиницы</a>
       </li>
     </ul>
-  </header>
+
 <!--FILTER CATALOG-->
   <section class="catalog_products">
     <h2 class="visually_hidden">Список гостиниц с фильтрами</h2>
@@ -125,17 +129,29 @@
       </ul>
     </fieldset>
     <!--RANGE-->
-    <fieldset class="range_filter_group">
-      <legend class="range_filter_title">Стоимость, ₽:</legend>
+    <fieldset class="catalog_filter_group">
+      <legend class="catalog_filter_title">Стоимость, ₽:</legend>
       <h2 class="visually_hidden">Диапазон цены</h2>
-            <input type="number" class="range_number_min" min="0" max="9000" step="1" value="0">
-          <input type="number" class="range_number_max" min="0" max="9000" step="1" value="9000">
-          <input type="range"  class="range_slider" min="0" max="9000">
+      <label class="number_field from">
+        от
+          <input type="number" class="range_number min" min="0" max="9000" step="1" value="0">
+        </label>
+      <label class="number_field to">
+           <input type="number" class="range_number max" min="0" max="9000" step="1" value="9000">
+           до
+      </label>
+            <input type="range"  class="range_slider" min="0" max="9000">
       </fieldset>
-
+    <!--BUTTON-->
       <button class="button apply" type="submit">Применить</button>
       <button class="button reset" type="reset">Сбросить</button>
     </form>
+  </header>
+  <!--CATALOG-->
+  <div class="catalog_search">
+    <h2 class="catalog_search_title">найдено гостиниц:
+      <span class="catalog_search_amount">38</span>
+    </h2>
 <!--Сортировка-->
     <select class="select_control" aria-label="Сортировка">
       <option value="popular">Сначала популярные</option>
@@ -152,7 +168,7 @@
       <img class="button_card_img" src="img/svg/icon/choice/tile.svg" width="16" height="14" alt="плитка" >
     </a>
     <a href="#" class="button button_list">
-      <span class="visually-hidden">Показать список</span>
+      <span class="visually_hidden">Показать список</span>
       <img class="button_card_img" src="img/svg/icon/choice/list.svg" width="16" height="14" alt="список" >
     </a>
 <!--CARD-->
@@ -239,18 +255,19 @@
       </li>
     </ul>
   </section>
+</div>
 </main>
 
      <!--SUBSCRIBE-->
      <section class="subscribe">
-      <h2 class="visually-hidden">Рассылка</h2>
-      <p class="subscribe_title">Подпишитесь на рассылку</p>
+      <h2 class="subscribe_title">Подпишитесь на рассылку</h2>
       <p class="subscribe_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="subscribe-email">Email</label>
-        <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-        <button class="button subscribe-button" type="submit">
-          <span class="visually-hidden">Отправить</span>
+        <label for="subscribe_email">
+          <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+      </label>
+        <button class="subscribe_button" type="submit"> подписаться
+          <span class="visually_hidden">Отправить</span>
         </button>
       </form>
     </section>
@@ -258,7 +275,7 @@
 <!--FOOTER-->
     <footer class="page_footer">
       <section class="social_footer">
-        <h2 class="visually-hidden">Социальные сети</h2>
+        <h2 class="visually_hidden">Социальные сети</h2>
         <ul class="social_footer_list">
           <li class="social_footer_item vk">
             <a href="https://vk.com/htmlacademy" class="footer_item_link">
@@ -278,11 +295,11 @@
         </ul>
       </section>
       <section class="contact_footer">
-        <h2 class="visually-hidden">Контакты</h2>
+        <h2 class="visually_hidden">Контакты</h2>
           <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
       <section class="academy">
-        <h2 class="visually-hidden">HTML Academy</h2>
+        <h2 class="visually_hidden">HTML Academy</h2>
         <a href="https://htmlacademy.ru/" class="academy_link">
           <img src="img/svg/logo/academy.svg" width="115" height="33" alt="HTML Academy" class="logo_link_academy">
         </a>

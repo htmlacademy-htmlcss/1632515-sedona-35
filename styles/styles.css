@@ -13,6 +13,15 @@
   src: url(../fonts/ptsans-700.woff2) format(woff2);
   font-display: swap;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
 /*...................................................*/
 html{
   height: 100%;
@@ -23,8 +32,6 @@ body{
   line-height: 21px;
   color: #000;
   background-color: #F2F2F2;
-  display: flex;
-  flex-direction: column;
   min-height: 100%;
   margin: 0;
 }
@@ -43,11 +50,16 @@ body{
 .wrapper{
   width:1200px;
   margin:0 auto;
-  height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.6);
+  box-shadow: 0 0 10px 1px rgba(34, 60, 80, 0.6);
 }
+/*
+[class*="__content"]{
+  width: 1060px;
+  margin: 0 auto;
+}/*
 /*topic title*/
 .topic_title{
   font-weight: 700;
@@ -278,27 +290,52 @@ margin: 0 auto 20px;
 .page_footer {
   background-color: #FFFFFF;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.footer-contacts-phone {
+.page_footer section{
+  margin: 45px 70px 35px;
+}
+.footer_contacts_phone {
 color: #000000;
 font-size: 40px;
 line-height: 40px;
 }
+ .social_footer_list{
+  display: flex;
+ }
+ .social_footer_item{
+padding: 13px 12px;
+ }
+
+
 
 /*..................PAGE2.......................*/
 .inner_header{
   background: url("../img/jpeg/background/catalog-back.jpg") no-repeat;
   background-size: cover;
+
 }
 .inner_header_title{
 font-weight: 700;
 font-size: 60px;
 line-height: 78px;
 color: #FFFFFF;
+margin: 35px 0 8px;
 }
- .breadcrumbs-link{
+.breadcrumbs_list{
+  display: flex;
+}
+.breadcrumbs_item.arrow{
+  margin: 0 11px;
+}
+ .breadcrumbs_link{
   color: #FFFFFF;
   font-size: 16px;
+}
+/*..FILTER...*/
+.catalog_filter{
+  display: flex;
 }
 .catalog_filter_group{
   border: 0;
@@ -309,6 +346,7 @@ font-size: 20px;
 font-weight: 700;
 line-height: 24px;
 }
+
 
 /*.......RANGE.....*/
 .range_number{
@@ -344,6 +382,10 @@ line-height: 24px;
 .catalog_search{
   background-color: #FFFFFF;
 }
+.select_bar{
+  display: flex;
+  justify-content: space-between;
+}
 .select_control{
 width: 292px;
 min-height: 49px;
@@ -357,12 +399,33 @@ padding: 16px 17px;
 user-select: none;
 }
 /*CARD*/
+.hotel_card_list{
+  display: flex;
+  flex-wrap: wrap;
+}
 .hotel_item{
   border-radius: 4px;
   border: 2px solid rgba(230, 230, 230, 1);
   width: 340px;
   min-height: 438px;
   padding: 20px;
+  margin: 20px;
+}
+.hotel_card_title{
+margin: 16px 0;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+}
+.price_line{
+  margin-bottom: 16px;
+}
+.button_line{
+  margin-bottom: 16px;
+}
+.button_line a{
+  padding: 8px 18px;
+  margin-bottom: 16px;
 }
  .hotel_card_link{
 font-size: 24px;
@@ -383,6 +446,9 @@ color: #000000;
  border:0;
 }
 /*....PAGINATION.....*/
+.pagination_list{
+  display: flex;
+}
 .pagination_item{
   width: 60px;
   height: 60px;
@@ -392,7 +458,8 @@ color: #000000;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-}
+  margin: 40px 8px 60px;
+  }
 .pagination_link{
   color: #FFFFFF;
 }

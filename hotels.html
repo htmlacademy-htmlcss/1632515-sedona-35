@@ -59,21 +59,25 @@
 <main class="main_inner">
   <!--HEADER INNER-->
   <header class="inner_header">
-    <h1 class="inner_header_title">Гостиницы Седоны</h1>
-    <ul class="breadcrumbs list">
+    <div class="top_bar">
+      <h1 class="inner_header_title">
+        Гостиницы Седоны
+      </h1>
+    <ul class="breadcrumbs_list list">
       <li class="breadcrumbs_item">
         <a class="breadcrumbs_link link" href="index.html">
           <span class="visually_hidden"> Главная </span>
           <img class="breadcrumbs_item_img" src="img/svg/icon/breadcrumb/home.svg"  width="13" height="15" alt="дом" >
         </a>
       </li>
-      <li class="breadcrumbs_item">
+      <li class="breadcrumbs_item arrow">
         <img src="img/svg/icon/breadcrumb/arrow.svg" alt="cтрелка">
       </li>
             <li class="breadcrumbs_item">
-        <a class="breadcrumbs-link link">Гостиницы</a>
+        <a class="breadcrumbs_link link">Гостиницы</a>
       </li>
     </ul>
+  </div>
 
 <!--FILTER CATALOG-->
   <section class="catalog_products">
@@ -132,50 +136,52 @@
     <fieldset class="catalog_filter_group">
       <legend class="catalog_filter_title">Стоимость, ₽:</legend>
       <h2 class="visually_hidden">Диапазон цены</h2>
-      <label class="number_field from">
-        от
+        <label class="number_field from">
+          от
           <input type="number" class="range_number min" min="0" max="9000" step="1" value="0">
         </label>
-      <label class="number_field to">
+        <label class="number_field to">
            <input type="number" class="range_number max" min="0" max="9000" step="1" value="9000">
            до
-      </label>
+        </label>
             <input type="range"  class="range_slider" min="0" max="9000">
       </fieldset>
     <!--BUTTON-->
-      <button class="button apply" type="submit">Применить</button>
-      <button class="button reset" type="reset">Сбросить</button>
-    </form>
+        <button class="button apply" type="submit">Применить</button>
+        <button class="button reset" type="reset">Сбросить</button>
+      </form>
+    </section>
   </header>
   <!--CATALOG-->
   <div class="catalog_search">
+    <div class="select_bar">
     <h2 class="visually_hidden">каталог гостиниц</h2>
     <p class="catalog_search_title topic_title">найдено гостиниц:
       <span class="catalog_search_amount">38</span>
     </p>
     <!--Сортировка-->
-    <div class="select_bar">
+
       <select class="select_control" aria-label="Сортировка">
-      <option value="popular">Сначала популярные</option>
-      <option value="cheap">Сначала дешёвые</option>
-      <option value="expensive">Сначала дорогие</option>
+        <option value="popular">Сначала популярные</option>
+        <option value="cheap">Сначала дешёвые</option>
+        <option value="expensive">Сначала дорогие</option>
       </select>
 <!--Вид отображения-->
-    <div class="veiw_bar">
-      <a href="#" class="veiw_button button_card link">
-      <span class="visually_hidden">Показать карточками</span>
-      <img class="button_card_img" src="img/svg/icon/veiw/card.svg" width="16" height="14" alt="карточки" >
-      </a>
-      <a href="#" class="veiw_button button_tile link">
-      <span class="visually_hidden">Показать плиткой</span>
-      <img class="button_card_img" src="img/svg/icon/veiw/tile.svg" width="16" height="14" alt="плитка" >
-      </a>
-      <a href="#" class="veiw_button button_list link">
-      <span class="visually_hidden">Показать список</span>
-      <img class="button_card_img" src="img/svg/icon/veiw/list.svg" width="16" height="14" alt="список" >
-    </a>
-  </div>
-  </div>
+          <div class="veiw_bar">
+            <a href="#" class="veiw_button button_card link">
+              <span class="visually_hidden">Показать карточками</span>
+              <img class="button_card_img" src="img/svg/icon/veiw/card.svg" width="16" height="14" alt="карточки" >
+            </a>
+            <a href="#" class="veiw_button button_tile link">
+              <span class="visually_hidden">Показать плиткой</span>
+              <img class="button_card_img" src="img/svg/icon/veiw/tile.svg" width="16" height="14" alt="плитка" >
+            </a>
+            <a href="#" class="veiw_button button_list link">
+              <span class="visually_hidden">Показать список</span>
+              <img class="button_card_img" src="img/svg/icon/veiw/list.svg" width="16" height="14" alt="список" >
+          </a>
+        </div>
+    </div>
 <!--CARD-->
     <ul class="hotel_card_list list">
       <li class="hotel_item">
@@ -299,6 +305,7 @@
 
    <!--SUBSCRIBE-->
    <section class="subscribe_second">
+    <div class="subscribe_box">
     <h2 class="subscribe_title topic_title">Подпишитесь на рассылку</h2>
     <p class="subscribe_description topic_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
@@ -309,6 +316,7 @@
         <span class="visually_hidden">Отправить</span>
       </button>
     </form>
+  </div>
   </section>
 
 <!--FOOTER-->
@@ -335,7 +343,7 @@
     </section>
     <section class="contact_footer">
       <h2 class="visually_hidden">Контакты</h2>
-        <a class="footer-contacts-phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="footer_contacts_phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </section>
     <section class="academy">
       <h2 class="visually_hidden">HTML Academy</h2>

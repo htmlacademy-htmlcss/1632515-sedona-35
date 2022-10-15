@@ -55,11 +55,11 @@ body{
   flex-direction: column;
   box-shadow: 0 0 10px 1px rgba(34, 60, 80, 0.6);
 }
-/*
+
 [class*="__content"]{
   width: 1060px;
   margin: 0 auto;
-}/*
+}
 /*topic title*/
 .topic_title{
   font-weight: 700;
@@ -84,56 +84,44 @@ body{
 
 
     /*..............HEADER...................*/
-    .header_logo{
-      z-index: 2;
+    .navigation_header__content,
+    .page_header{
+      display: flex;
+      background-color: #FFFFFF;
     }
-     .page_header {
-  background-color: #FFFFFF;
-  height: 64px;
-  }
-.navigation_header{
-  display: flex;
-  width: 1060px;
-  margin: 0 auto;
+    .navigation_list{
+      display: flex;
+      margin: 0 285px 0 30px;
+    }
+    .navigation_user{
+      display: flex;
+    }
+    .navigation_link{
+      font-size: 20px;
+      font-weight: 700;
+      color: #000000;
 
-  }
-.navigation_list{
-display: flex;
-width: 507px;
-margin-left: auto;
-}
-.navigation_user{
-  display: flex;
-  width: 270px;
-  margin-right: auto;
-}
-.navigation_item{
-  padding: 20px 16px;
-}
-.navigation_item.like{
-  padding-right: 0;
-}
-.navigation_link {
-  font-size: 20px;
-  font-weight: 700;
-  color: #000000;
-  background-color: #FFFFFF;
-}
-.button_item{
-width: 100%;
-padding: 20px 0 14px 20px;
-}
-.button_header_link {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background-color: #756157;
-  border-radius: 4px;
-  border: 0;
-  padding: 8px 28px;
-   }
+    }
+    .navigation_item{
+      padding: 20px 16px;
+    }
+    .navigation_user>.navigation_item{
+      padding: 22px 12px;
+    }
+    .button_header_link{
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: #756157;
+      border-radius: 4px;
+      border: 0;
+      display: block;
+      padding: 8px 34px;
+      margin: 14px 0 14px 20px;
+    }
+   
     /*..................HERO.................*/
 .main_container {
   flex-grow: 1;
@@ -225,6 +213,7 @@ position: absolute;
   min-height: 406px;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
    }
    .search_box{
     text-align: center;
@@ -432,6 +421,12 @@ font-size: 24px;
 font-weight: 700;
 line-height: 28px;
 color: #000000;
+}
+.hotel_card_more{
+  background-color: #756157;
+}
+.hotel_card_favorites{
+  background-color: #7DB54F;
 }
 .hotel_card_rating{
   background-color:#F2F2F2;

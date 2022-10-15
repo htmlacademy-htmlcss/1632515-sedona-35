@@ -13,7 +13,7 @@
   <div class="wrapper">
     <!--HEADER-->
     <header class="page_header">
-      <nav class="navigation_header">
+      <nav class="navigation_header__content">
         <a href="index.html" class="header_logo link">
           <img class="page_logo_header" src="img/svg/logo/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
@@ -167,7 +167,7 @@
         <option value="expensive">Сначала дорогие</option>
       </select>
 <!--Вид отображения-->
-          <div class="veiw_bar">
+        <div class="veiw_bar">
             <a href="#" class="veiw_button button_card link">
               <span class="visually_hidden">Показать карточками</span>
               <img class="button_card_img" src="img/svg/icon/veiw/card.svg" width="16" height="14" alt="карточки" >
@@ -219,7 +219,8 @@
   </div>
   <div class="button_line">
     <a class="hotel_card_more button link" href="#">подробнее</a>
-    <a class="hotel_card_chose button link" href="#">в избранное</a>
+    <a class="hotel_card_favorites button link" href="#">в избранном</a>
+    <!--<a class="hotel_card_chose button link" href="#">в избранное</a> -->
   </div>
 <!--рейтинг-->
 <div class="rating_line">
@@ -276,7 +277,7 @@
           </span>
           <span class="hotel_card_rating">рейтинг:5,0</span>
       </div>
-            </li>
+      </li>
     </ul>
 <!--PAGINATION-->
     <ul class="pagination_list list">
@@ -299,8 +300,8 @@
         <a class="pagination_link link" href="#">10</a>
       </li>
     </ul>
-  </section>
-</div>
+  </div>
+
 </main>
 
    <!--SUBSCRIBE-->
@@ -310,7 +311,7 @@
     <p class="subscribe_description topic_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
       <label for="subscribe_email">
-        <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+        <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe_email" id="subscribe_email" required>
     </label>
       <button class="subscribe_button" type="submit"> подписаться
         <span class="visually_hidden">Отправить</span>

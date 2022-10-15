@@ -8,12 +8,16 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
   <!--HEADER-->
       <header class="page_header">
-        <nav class="navigation_header">
+        <nav class="navigation_header__content">
           <a href="index.html" class="header_logo link">
             <img class="page_logo_header" src="img/svg/logo/logo.svg" width="140" height="70" alt="Логотип города Седона.">
           </a>
@@ -146,7 +150,7 @@
             <p class="subscribe_description topic_description">Только полезная информация и никакого спама, честное бойскаутское!</p>
             <form class="subscribe_form" action="https://echo.htmlacademy.ru/" method="post">
               <label for="subscribe_email">
-                <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+                <input class="field"  placeholder="Ваш e-mail" type="email" name="subscribe_email" id="subscribe_email" required>
             </label>
               <button class="subscribe_button" type="submit"> подписаться
                 <span class="visually_hidden">Отправить</span>

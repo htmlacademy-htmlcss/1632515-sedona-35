@@ -306,6 +306,9 @@ margin: 0;
   font-size: 16px;
 }
 /*..FILTER...*/
+.main_inner{
+  background-color: #fff;
+}
 .catalog_products{
   padding-bottom: 70px;
 }
@@ -390,7 +393,7 @@ margin-top: 56px;
 }
 /*............CATALOG..........*/
 /*select bar*/
-.catalog_search{
+.catalog_search__content{
   background-color: #FFFFFF;
 }
 .select_bar{
@@ -424,6 +427,7 @@ user-select: none;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 40px;
 }
 .hotel_item{
   border-radius: 4px;
@@ -439,67 +443,98 @@ font-size: 24px;
 font-weight: 700;
 line-height: 28px;
 }
+.hotel_card_link{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #000000;
+  }
 .price_line{
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 16px;
 }
+/*button card*/
 .button_line{
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 16px;
 }
-.button_line a{
-  padding: 8px 18px;
-  margin-bottom: 16px;
-}
- .hotel_card_link{
-font-size: 24px;
+.button_card{
 font-weight: 700;
-line-height: 28px;
-color: #000000;
+font-size: 16px;
+line-height: 20px;
+text-transform: uppercase;
+color: #FFFFFF;
+border: 0;
+border-radius: 4px;
+user-select: none;
+cursor: pointer;
 }
-.hotel_card_more{
+.more{
+  padding: 8px 26px;
   background-color: #756157;
 }
-.hotel_card_favorites{
-  background-color: #7DB54F;
-}
-.hotel_card_rating{
-  background-color:#F2F2F2;
-  padding: 8px 50px;
- text-transform: uppercase;
- font-size: 16px;
- line-height: 20px;
- color: rgba(51, 51, 51, 1);
- border-radius:4px;
- user-select: none;
- cursor: pointer;
- border:0;
-}
-/*....PAGINATION.....*/
-.pagination_list{
-  display: flex;
-}
-.pagination_item{
-  width: 60px;
-  height: 60px;
-  border: none;
-  border-radius: 4px;
+.chose{
+  padding: 8px 20px;
   background-color: #82B3D3;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  margin: 40px 8px 60px;
-  }
-.pagination_link{
-  color: #FFFFFF;
 }
-.pagination_current,
-.pagination_dots{
-  color: #000000;
+.favorites{
+  background-color: #7DB54F;
+  padding: 8px 18px;
 }
-.active,
-.dots{
+/*rating*/
+.rating_line{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.rating{
+  font-weight: 400;
+  color: #333333;
   background-color: #F2F2F2;
+  padding:9px 22px 8px 23px;
+  cursor:default;
+  }
+
+.divide{
+  margin-bottom: 40px;
 }
 
+/*....PAGINATION.....*/
+.pagination_list {
+display: flex;
+align-items: center;
+
+}
+.pagination_item{
+  min-height: 60px;
+  padding-top: 10px;
+
+}
+.pagination_item:not(:last-child){
+  margin-right: 8px;
+}
+
+.pagination_link{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  background-color: #82B3D3;
+  border: 0;
+  border-radius: 4px;
+
+}
+.pagination_dots{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0;
+  border: 0;
+  border-radius: 4px;
+}
 /*......................SUBSCRIBE.............................*/
 .subscribe_second {
   width: 100%;

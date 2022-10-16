@@ -396,6 +396,12 @@ margin-top: 56px;
 .select_bar{
   display: flex;
   justify-content: space-between;
+  padding: 57px 0 47px;
+  align-items: center;
+}
+.catalog_search_title{
+  margin: 0;
+  padding: 0;
 }
 .select_control{
 width: 292px;
@@ -403,24 +409,29 @@ min-height: 49px;
 border-radius: 4px;
 border:2px solid rgba(229, 229, 229, 1);
 }
+/*veiw button*/
 .veiw_button{
 border-radius: 4px;
-border: 2px solid #000000;
-padding: 16px 17px;
+outline: 2px solid #000000;
+padding: 13px 14px;
 user-select: none;
 }
-/*CARD*/
+.veiw_button:not(:last-child){
+  margin-right: 8px;
+}
+/*....................CARD..................*/
 .hotel_card_list{
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .hotel_item{
   border-radius: 4px;
-  border: 2px solid rgba(230, 230, 230, 1);
+  outline: 2px solid rgba(230, 230, 230, 1);
   width: 340px;
   min-height: 438px;
   padding: 20px;
-  margin: 20px;
+  margin: 0;
 }
 .hotel_card_title{
 margin: 16px 0;

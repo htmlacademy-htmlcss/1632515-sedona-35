@@ -53,6 +53,7 @@ body{
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   box-shadow: 0 0 10px 1px rgba(34, 60, 80, 0.6);
 }
 
@@ -88,6 +89,10 @@ body{
     .page_header{
       display: flex;
       background-color: #FFFFFF;
+      height: 64px;
+    }
+    .header_logo{
+      z-index: 2;
     }
     .navigation_list{
       display: flex;
@@ -100,7 +105,6 @@ body{
       font-size: 20px;
       font-weight: 700;
       color: #000000;
-
     }
     .navigation_item{
       padding: 20px 16px;
@@ -121,7 +125,6 @@ body{
       padding: 8px 34px;
       margin: 14px 0 14px 20px;
     }
-   
     /*..................HERO.................*/
 .main_container {
   flex-grow: 1;
@@ -157,46 +160,24 @@ body{
 
   }
       /*...................ADVANTAGES...................*/
-.advantages{
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  text-align: center;
+
+  .advantages_list{
+    display: flex;
+    text-align: center;
   }
+.advantages_block_text{
+width: 230px;
+min-height: 181px;
+ margin:  92px 85px 111px ;
+}
+
 .advantages_title{
 font-size: 24px;
 font-weight: 700;
 line-height: 28px;
 text-transform: uppercase;
-
+padding: 0 29px ;
 }
-/*
-.advantages_title::after{
-content: '';
-  background-color: #FFFFFF;
-  width: 60px;
-  height: 2px;
-  display: block;
-position: absolute;
- }*/
-
-.advantages_list{
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.tile_1 li:nth-child(odd){
-  background-color: rgba(131, 179, 211, 0.12);
-}
- .tile_2 li:nth-child(odd){
-  background-color: rgba(131, 179, 211, 0.12);
-}
- .advantages_item{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
- }
 .advantages_item.blue {
   background-color: #82B3D3;
   color: #FFF;
@@ -207,7 +188,7 @@ position: absolute;
 .advantages_item.food{
   background-color:#FFF;
 }
-/*................SEARCH HOTELS.....................*/
+ /*................SEARCH HOTELS.....................*/
 .hotel{
   width: 100%;
   min-height: 406px;
@@ -276,7 +257,7 @@ margin: 0 auto 20px;
  border:0;
 }
 /*.........................FOOTER.........................*/
-.page_footer {
+.page_footer__content {
   background-color: #FFFFFF;
   width: 100%;
   display: flex;
@@ -310,10 +291,12 @@ font-weight: 700;
 font-size: 60px;
 line-height: 78px;
 color: #FFFFFF;
-margin: 35px 0 8px;
+padding: 35px 0 8px 0;
+margin: 0;
 }
 .breadcrumbs_list{
   display: flex;
+  margin-bottom: 45px;
 }
 .breadcrumbs_item.arrow{
   margin: 0 11px;
@@ -323,18 +306,74 @@ margin: 35px 0 8px;
   font-size: 16px;
 }
 /*..FILTER...*/
+.catalog_products{
+  padding-bottom: 70px;
+}
 .catalog_filter{
   display: flex;
+  }
+.catalog_filter_title{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+  }
+  .catalog_filter_item:not(:last-child){
+margin-bottom: 16px;
+  }
+
+input[type="checkbox"],
+input[type="radio"]{
+  transform:scale(1.8);
 }
+
+
 .catalog_filter_group{
+  padding: 0;
   border: 0;
   color: #FFFFFF;
 }
-.catalog_filter_title{
-font-size: 20px;
-font-weight: 700;
-line-height: 24px;
+.catalog_filter_group.checkbox{
+  margin-right:70px;
+  min-width: 150px;
 }
+.catalog_filter_group.radio{
+  margin-right:140px;
+  min-width: 150px;
+}
+.catalog_filter_group.price{
+  margin-right:70px;
+  min-width: 288px;
+}
+
+
+.catalog_filter_price_box{
+  display: flex;
+}
+.button_filter_box{
+margin-top: 56px;
+}
+.button_filter {
+  background-color:rgba(130, 179, 211, 1);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  border-radius:4px;
+  user-select: none;
+  cursor: pointer;
+  border:0;
+  }
+.apply {
+  padding: 8px 50px;
+  margin-bottom: 32px;
+}
+.reset {
+  padding: 8px 57px;
+  background-color: transparent;
+}
+
 
 
 /*.......RANGE.....*/
@@ -348,23 +387,6 @@ line-height: 24px;
 }
 .range_number.max{
   border-radius: 0 4px 4px 0;
-}
-/*...........BUTTON..........*/
-.button{
-  background-color:rgba(130, 179, 211, 1);
-  padding: 8px 50px;
- text-transform: uppercase;
- font-weight: 700;
- font-size: 16px;
- line-height: 20px;
- color: #FFFFFF;
- border-radius:4px;
- user-select: none;
- cursor: pointer;
- border:0;
-}
-.button[type=reset] {
-  background-color: transparent;
 }
 /*............CATALOG..........*/
 /*select bar*/

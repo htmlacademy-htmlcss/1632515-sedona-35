@@ -7,6 +7,10 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Гостиницы Седона</title>
 </head>
 <body>
@@ -17,18 +21,20 @@
         <a href="index.html" class="header_logo link">
           <img class="page_logo_header" src="img/svg/logo/logo.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
+        <!--nav list-->
         <ul class="navigation_list list">
           <li class="navigation_item main">
             <a class="navigation_link navigation_link_current link" href="index.html">Главная</a>
           </li>
           <li class="navigation_item about">
-            <a class="navigation_link link" href="">О седоне</a>
+            <a class="navigation_link link" href="#">О седоне</a>
           </li>
           <li class="navigation_item hostel">
             <a class="navigation_link link" href="hotels.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation_list navigation_user list">
+        <!--nav user-->
+        <ul class="navigation_user list">
 
           <li class="navigation_item search">
             <a class="navigation_link link" href="#">
@@ -44,8 +50,8 @@
             </a>
           </li>
 
-          <li class="navigation_item button_header">
-            <a class="navigation_link button_header link" href="#">
+          <li class="button_item">
+            <a class="button_header_link link" href="#">
               <span class="navigation_button_title" >Хочу сюда! </span>
             </a>
           </li>
@@ -54,12 +60,11 @@
       </nav>
     </header>
 
-
     <!--MAIN-->
 <main class="main_inner">
   <!--HEADER INNER-->
   <header class="inner_header">
-    <div class="top_bar">
+    <div class="top_box__content">
       <h1 class="inner_header_title">
         Гостиницы Седоны
       </h1>
@@ -77,15 +82,17 @@
         <a class="breadcrumbs_link link">Гостиницы</a>
       </li>
     </ul>
-  </div>
+
 
 <!--FILTER CATALOG-->
   <section class="catalog_products">
     <h2 class="visually_hidden">Список гостиниц с фильтрами</h2>
     <form class="catalog_filter" action="https://echo.htmlacademy.ru/" method="get">
       <!--FILTER-->
-      <fieldset class="catalog_filter_group">
-        <legend class="catalog_filter_title">Инфраструктура:</legend>
+      <fieldset class="catalog_filter_group checkbox">
+        <legend class="catalog_filter_title">
+          Инфраструктура:
+        </legend>
 
         <ul class="catalog_filter_list list">
           <li class="catalog_filter_item">
@@ -109,7 +116,7 @@
         </ul>
       </fieldset>
 
-      <fieldset class="catalog_filter_group">
+      <fieldset class="catalog_filter_group radio">
       <legend class="catalog_filter_title">Тип Жилья:</legend>
       <ul class="catalog_filter_list list">
         <li class="catalog_filter_item">
@@ -133,7 +140,8 @@
       </ul>
     </fieldset>
     <!--RANGE-->
-    <fieldset class="catalog_filter_group">
+    <div class="catalog_filter_price_box">
+    <fieldset class="catalog_filter_group price">
       <legend class="catalog_filter_title">Стоимость, ₽:</legend>
       <h2 class="visually_hidden">Диапазон цены</h2>
         <label class="number_field from">
@@ -147,18 +155,27 @@
             <input type="range"  class="range_slider" min="0" max="9000">
       </fieldset>
     <!--BUTTON-->
-        <button class="button apply" type="submit">Применить</button>
-        <button class="button reset" type="reset">Сбросить</button>
+    <div class="button_filter_box">
+        <button class="button_filter apply" type="submit">Применить</button>
+        <button class="button_filter reset" type="reset">Сбросить</button>
+        </div>
+      </div>
       </form>
     </section>
+    </div>
   </header>
-  <!--CATALOG-->
-  <div class="catalog_search">
+  <!-----------CATALOG-------------->
+  <div class="catalog_search__content">
     <div class="select_bar">
-    <h2 class="visually_hidden">каталог гостиниц</h2>
-    <p class="catalog_search_title topic_title">найдено гостиниц:
-      <span class="catalog_search_amount">38</span>
-    </p>
+      <h2 class="visually_hidden">
+        каталог гостиниц
+      </h2>
+      <p class="catalog_search_title topic_title">
+        найдено гостиниц:
+        <span class="catalog_search_amount">
+          38
+        </span>
+      </p>
     <!--Сортировка-->
 
       <select class="select_control" aria-label="Сортировка">
@@ -321,38 +338,40 @@
   </section>
 
 <!--FOOTER-->
-  <footer class="page_footer">
+<footer class="page_footer">
+  <div class="page_footer__content">
     <section class="social_footer">
-      <h2 class="visually_hidden">Социальные сети</h2>
-      <ul class="social_footer_list list">
-        <li class="social_footer_item vk">
-          <a href="https://vk.com/htmlacademy" class="footer_item_link link">
-            <img src="img/svg/icon/social/vk.svg" width="24" height="14" alt="Вконтакте" class="logo_link">
-          </a>
-        </li>
-        <li class="social_footer_item telegram">
-          <a href="https://t.me/htmlacademy" class="footer_item_link link">
-            <img src="img/svg/icon/social/telegram.svg" width="24" height="14" alt="Телеграм" class="logo_link">
-          </a>
-        </li>
-        <li class="social_footer_item youtube">
-          <a href="https://www.youtube.com/user/htmlacademyru" class="footer_item_link link">
-            <img src="img/svg/icon/social/youtube.svg" width="24" height="14" alt="YouTube" class="logo_link">
-          </a>
-        </li>
-      </ul>
+    <h2 class="visually_hidden">Социальные сети</h2>
+    <ul class="social_footer_list list">
+      <li class="social_footer_item vk">
+        <a href="https://vk.com/htmlacademy" class="footer_item_link link">
+          <img src="img/svg/icon/social/vk.svg" width="24" height="14" alt="Вконтакте" class="logo_link">
+        </a>
+      </li>
+      <li class="social_footer_item telegram">
+        <a href="https://t.me/htmlacademy" class="footer_item_link link">
+          <img src="img/svg/icon/social/telegram.svg" width="24" height="14" alt="Телеграм" class="logo_link">
+        </a>
+      </li>
+      <li class="social_footer_item youtube">
+        <a href="https://www.youtube.com/user/htmlacademyru" class="footer_item_link link">
+          <img src="img/svg/icon/social/youtube.svg" width="24" height="14" alt="YouTube" class="logo_link">
+        </a>
+      </li>
+    </ul>
     </section>
     <section class="contact_footer">
-      <h2 class="visually_hidden">Контакты</h2>
-        <a class="footer_contacts_phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <h2 class="visually_hidden">Контакты</h2>
+      <a class="footer_contacts_phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </section>
     <section class="academy">
-      <h2 class="visually_hidden">HTML Academy</h2>
-      <a href="https://htmlacademy.ru/" class="academy_link link">
-        <img src="img/svg/logo/academy.svg" width="115" height="33" alt="HTML Academy" class="logo_link_academy">
-      </a>
+    <h2 class="visually_hidden">HTML Academy</h2>
+    <a href="https://htmlacademy.ru/" class="academy_link link">
+      <img src="img/svg/logo/academy.svg" width="115" height="33" alt="HTML Academy" class="logo_link_academy">
+    </a>
     </section>
-  </footer>
+  </div>
+</footer>
 
   </div>
 </body>

@@ -22,6 +22,40 @@ img {
   max-width: 100%;
   object-fit: contain;
 }
+:root{
+/*button*/
+  --button-green:rgba(125, 181, 79, 1);
+  --button-blue: rgba(130, 179, 211, 1);
+  --button-brown:rgba(117, 97, 87, 1);
+/*button hover*/
+  --button-hover-green:rgba(108, 158, 66, 1);
+  --button-hover-blue: rgba(104, 162, 202, 1);
+  --button-hover-brown:rgba(97, 80, 72, 1);
+
+/*text*/
+  --text-black:  rgba(0, 0, 0, 1);
+  --text-gray:   rgba(51, 51, 51, 1);
+  --text-white:  rgba(255, 255, 255, 1);
+  --text-opacity:rgba(255, 255, 255, 0.3);
+  --text-error:  rgba(255, 87, 87, 1);
+/*background*/
+  --backround-white:   rgba(255, 255, 255, 1);
+  --backround-blue:    rgba(130, 179, 211, 1);
+  --backround-second-1:rgba(131, 179, 211, 0.12);
+  --backround-second-2:rgba(131, 179, 211, 0.2);
+  --background-safe:   rgb(117,97,84);
+/*form*/
+  --form-input:    rgba(63, 94, 114, 1);
+  --form-element-1:rgba(229, 229, 229, 1);
+  --form-element-2:rgba(242, 242, 242, 1);
+/*icons*/
+  --icon-black:rgba(0, 0, 0, 1);
+  --icon-blue: rgba(131, 179, 211, 1);
+  --icon-green:rgba(125, 181, 79, 1);
+/*card*/
+  --border-card: rgba(230, 230, 230, 1);
+
+}
 /*...................................................*/
 html{
   height: 100%;
@@ -30,8 +64,8 @@ body{
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: #000;
-  background-color: #F2F2F2;
+  color: var(--text-black);
+  background-color: var(--form-element-2);
   min-height: 100%;
   margin: 0;
 }
@@ -67,10 +101,14 @@ body{
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 .topic_description{
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
+  padding: 0;
 }
 .link{
   text-decoration: none;
@@ -88,7 +126,7 @@ body{
     .navigation_header__content,
     .page_header{
       display: flex;
-      background-color: #FFFFFF;
+      background-color:var(--backround-white);
       height: 64px;
     }
     .header_logo{
@@ -105,7 +143,7 @@ body{
       padding: 20px 16px;
       font-size: 20px;
       font-weight: 700;
-      color: #000000;
+      color:var(--text-black);
     }
 
     .navigation_user{
@@ -123,8 +161,8 @@ body{
       font-weight: 700;
       line-height: 20px;
       text-transform: uppercase;
-      color: #FFFFFF;
-      background-color: #756157;
+      color: var(--text-white);
+      background-color: var(--button-brown);
       border-radius: 4px;
       border: 0;
       display: block;
@@ -142,7 +180,7 @@ body{
 .index_title{
   width: 100%;
   min-height: 485px;
-  background-color: #756157;
+  background-color: var(--background-safe);
   background: url(../img/svg/decoration.svg)  no-repeat bottom,
               url(../img/jpeg/background/index-back.jpg) no-repeat;
  background-size: 100% auto;
@@ -153,8 +191,8 @@ body{
   margin: 51px 0 82px 0;
     }
 .about_title {
-  background-color: #FFF;
-  color: #000;
+  background-color: var(--backround-white);
+  color: var(--text-black);
     }
   .sup_about_title{
      text-align: center;
@@ -164,6 +202,7 @@ body{
   .description_about_title{
     text-align: center;
     margin: 0 auto 90px;
+    color: var(--text-gray);
 
   }
       /*...................ADVANTAGES...................*/
@@ -184,36 +223,68 @@ font-weight: 700;
 line-height: 28px;
 text-transform: uppercase;
 padding: 0 29px ;
+position: relative;
+margin-bottom: 60px;
+
 }
-.advantages_item.blue {
-  background-color: #82B3D3;
-  color: #FFF;
+/*
+.advantages_title::before{
+  display: block;
+  width:60px;
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #000;
+  top:86px;
+  right:85px;
+}*/
+
+.advantages_description{
+  margin: 0;
+  }
+.advantages_item.blue{
+  background-color: var(--backround-blue);
+  color: var(--text-white);
+}
+.tile_1 .advantages_title,
+.tile_1 .advantages_title{
+  color: var(--text-black);
+}
+
+.tile_1 .advantages_description,
+.tile_2 .advantages_description{
+  color: var(--text-gray);
 }
 .advantages_item.road{
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: var(--backround-second-2);
 }
 .advantages_item.food{
-  background-color:#FFF;
+  background-color: var(--backround-white);
 }
+.advantages_block_text img{
+  margin-bottom: 30px;
+}
+.tile_2 .advantages_title{
+  margin: 0 0 30px 0;
+   }
  /*................SEARCH HOTELS.....................*/
 .hotel{
   width: 100%;
   min-height: 406px;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: var(--backround-white);
    }
    .search_box{
     text-align: center;
     margin: 96px auto;
     }
-.search_hotel {
+.button_search_hotel {
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFF;
-  background-color: rgba(117, 97, 87, 1);
+  color: var(--text-white);
+  background-color: var(--button-brown);
    padding: 20px 70px;
   border-radius: 4px;
 }
@@ -226,20 +297,21 @@ padding: 0 29px ;
 
 /*......................SUBSCRIBE.............................*/
 .subscribe_box{
-margin: 96px auto;
+margin: 96px auto 105px;
 text-align: center;
 }
 .subscribe {
-  background-color:#756157;
+  background-color:var(--background-safe);
   background: url("../img/jpeg/background/background-sub.jpg") no-repeat;
   background-size: 100% auto;
-  color: #FFF;
+  color: var(--text-white);
 }
-.subscribe_title{
+ .subscribe_title{
 margin: 0 auto 20px;
 }
 .subscribe_description{
   margin: 0 auto 54px;
+  max-width: 480px;
 }
 .field {
   width: 452px;
@@ -249,16 +321,16 @@ margin: 0 auto 20px;
   line-height: 24px;
   border-radius: 5px 0 0 5px;
   border:0;
-  background-color: #F2F2F2;
+  background-color: var(--form-element-2);
 }
 .subscribe_button {
- background-color:rgba(130, 179, 211, 1);
+ background-color:var(--button-blue);
  padding: 8px 50px;
  text-transform: uppercase;
  font-weight: 700;
  font-size: 20px;
  line-height: 36px;
- color: #FFFFFF;
+ color: var(--text-white);
  border-radius: 0 4px 4px 0;
  user-select: none;
  cursor: pointer;
@@ -266,24 +338,25 @@ margin: 0 auto 20px;
 }
 /*.........................FOOTER.........................*/
 .page_footer__content {
-  background-color: #FFFFFF;
+  background-color: var(--backround-white);
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .page_footer{
-  background-color: #FFF;
+  background-color: var(--backround-white);
 }
 .page_footer section{
   margin: 45px 0 35px 0;
 }
 .footer_contacts_phone {
-color: #000000;
+color: var(--text-black);
 font-size: 40px;
 line-height: 40px;
 }
  .social_footer_list{
   display: flex;
- }
+  }
  .footer_item_link{
   padding: 13px 12px;
  }
@@ -295,7 +368,7 @@ line-height: 40px;
 
 /*..................PAGE2.......................*/
 .inner_header{
-  background-color: #756157;
+  background-color: var(--background-safe);
   background: url("../img/jpeg/background/catalog-back.jpg") no-repeat;
   background-size: cover;
 
@@ -304,7 +377,7 @@ line-height: 40px;
 font-weight: 700;
 font-size: 60px;
 line-height: 78px;
-color: #FFFFFF;
+color: var(--text-white);
 padding: 35px 0 8px 0;
 margin: 0;
 }
@@ -316,12 +389,12 @@ margin: 0;
   margin: 0 11px;
 }
  .breadcrumbs_link{
-  color: #FFFFFF;
+  color: var(--text-white);
   font-size: 16px;
 }
 /*..FILTER...*/
 .main_inner{
-  background-color: #fff;
+  background-color: var(--backround-white);
 }
 .catalog_products{
   padding-bottom: 70px;
@@ -348,7 +421,7 @@ input[type="radio"]{
 .catalog_filter_group{
   padding: 0;
   border: 0;
-  color: #FFFFFF;
+  color: var(--text-white);
 }
 .catalog_filter_group.checkbox{
   margin-right:70px;
@@ -371,12 +444,12 @@ input[type="radio"]{
 margin-top: 56px;
 }
 .button_filter {
-  background-color:rgba(130, 179, 211, 1);
+  background-color: var(--button-blue);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: var(--text-white);
   border-radius:4px;
   user-select: none;
   cursor: pointer;
@@ -408,7 +481,7 @@ margin-top: 56px;
 /*............CATALOG..........*/
 /*select bar*/
 .catalog_search__content{
-  background-color: #FFFFFF;
+  background-color: var(--backround-white);
 }
 .select_bar{
   display: flex;
@@ -424,12 +497,12 @@ margin-top: 56px;
 width: 292px;
 min-height: 49px;
 border-radius: 4px;
-border:2px solid rgba(229, 229, 229, 1);
+border:2px solid var(--form-element-1);
 }
 /*veiw button*/
 .veiw_button{
 border-radius: 4px;
-outline: 2px solid #000000;
+outline: 2px solid var(--icon-black);
 padding: 13px 14px;
 user-select: none;
 }
@@ -445,7 +518,7 @@ user-select: none;
 }
 .hotel_item{
   border-radius: 4px;
-  outline: 2px solid rgba(230, 230, 230, 1);
+  outline: 2px solid var(--border-card);
   width: 340px;
   min-height: 438px;
   padding: 20px;
@@ -461,12 +534,13 @@ line-height: 28px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: #000000;
+  color: var(--text-black);
   }
 .price_line{
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  color: var(--text-gray);
 }
 /*button card*/
 .button_line{
@@ -479,7 +553,7 @@ font-weight: 700;
 font-size: 16px;
 line-height: 20px;
 text-transform: uppercase;
-color: #FFFFFF;
+color: var(--text-white);
 border: 0;
 border-radius: 4px;
 user-select: none;
@@ -487,14 +561,14 @@ cursor: pointer;
 }
 .more{
   padding: 8px 26px;
-  background-color: #756157;
+  background-color: var(--button-brown);
 }
 .chose{
   padding: 8px 20px;
-  background-color: #82B3D3;
+  background-color: var(--button-blue);
 }
 .favorites{
-  background-color: #7DB54F;
+  background-color: var(--button-green);
   padding: 8px 18px;
 }
 /*rating*/
@@ -505,8 +579,8 @@ cursor: pointer;
 }
 .rating{
   font-weight: 400;
-  color: #333333;
-  background-color: #F2F2F2;
+  color: var(--text-gray);
+  background-color: var(--form-element-2);
   padding:9px 22px 8px 23px;
   cursor:default;
   }
@@ -534,12 +608,15 @@ align-items: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: #FFFFFF;
+  color: var(--text-white);
   padding: 12px 24px;
-  background-color: #82B3D3;
+  background-color: var(--backround-blue);
   border: 0;
   border-radius: 4px;
-
+}
+.pagination_current{
+  background-color: var(--form-element-2);
+  color: var(--text-black);
 }
 .pagination_dots{
   font-weight: 700;
@@ -553,5 +630,5 @@ align-items: center;
 .subscribe_second {
   width: 100%;
   min-height: 415px;
-  background-color: #FFFFFF;
+  background-color: var(--backround-white);
   }

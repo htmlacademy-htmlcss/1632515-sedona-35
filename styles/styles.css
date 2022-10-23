@@ -21,6 +21,7 @@
 img {
   max-width: 100%;
   object-fit: contain;
+  vertical-align: top;
 }
 :root{
 /*button*/
@@ -219,25 +220,69 @@ body{
       /*...................ADVANTAGES...................*/
 
   .advantages_list{
-    display: flex;
-    text-align: center;
+    display: grid;
+    grid-template-areas:  "town   img    img"
+                          "square road   tourist"
+                          "bridge bridge devil"
+                          "home   food   gift";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
-.advantages_block_text{
-width: 230px;
-min-height: 181px;
- margin:  92px 85px 111px ;
-}
+  .advantages_title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
 
-.advantages_title{
-font-size: 24px;
-font-weight: 700;
-line-height: 28px;
-text-transform: uppercase;
-padding: 0 29px ;
-position: relative;
-margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    }
+  .advantages_item{
+    display: grid;
+    justify-items: center;
+    padding: 92px 85px 111px;
+    margin: 0;
+    text-align: center;
 
-}
+  }
+  .card_town{
+    grid-area: town;
+  }
+  .img_town{
+    grid-area: img;
+  }
+  .square{
+    grid-area: square;
+  }
+  .road{
+    grid-area: road;
+  }
+  .tourist{
+    grid-area: tourist;
+  }
+  .img_bridge{
+    grid-area: bridge;
+  }
+  .devil{
+    grid-area: devil;
+  }
+  .home{
+    grid-area: home;
+  }
+  .food{
+    grid-area: food;
+  }
+  .gift{
+    grid-area: gift;
+  }
+
+    .advantages_item.blue{
+      background-color: var(--backround-blue);
+    }
+      /*
+
+
+
 .card_img .advantages_title::before{
   display: block;
   width:60px;
@@ -285,7 +330,7 @@ margin-bottom: 60px;
 }
 .tile_2 .advantages_title{
   margin: 0 0 30px 0;
-   }
+   }*/
  /*................SEARCH HOTELS.....................*/
 .hotel{
   width: 100%;

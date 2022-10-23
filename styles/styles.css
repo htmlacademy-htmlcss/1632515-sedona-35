@@ -221,29 +221,23 @@ body{
 
   .advantages_list{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:  "town   img    img"
                           "square road   tourist"
                           "bridge bridge devil"
                           "home   food   gift";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
   }
-  .advantages_title{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    text-transform: uppercase;
-
-    margin: 0;
-    padding: 0;
-    }
-  .advantages_item{
+   .advantages_item{
     display: grid;
-    justify-items: center;
     padding: 92px 85px 111px;
     margin: 0;
     text-align: center;
-
+    background-color: var(--backround-second-1);
+    max-height: 384px;
+  }
+  .advantages_item.text_card{
+    padding: 103px 85px 121px;
   }
   .card_town{
     grid-area: town;
@@ -256,6 +250,7 @@ body{
   }
   .road{
     grid-area: road;
+    background-color: var(--backround-second-2);
   }
   .tourist{
     grid-area: tourist;
@@ -271,66 +266,53 @@ body{
   }
   .food{
     grid-area: food;
+    background-color: var(--backround-white);
   }
   .gift{
     grid-area: gift;
   }
-
+  .advantages_title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin: 0 0 62px 0;
+    padding: 0;
+    position: relative;
+    }
+    .advantages_title::before{
+      display: block;
+      width:60px;
+      height: 2px;
+      background-color: var(--pseudo-color-black);
+      content: '';
+      position: absolute;
+      right: 85px;
+       bottom: -30px;}
+       .blue .advantages_title::before{
+        background-color: var(--pseudo-color-grey);
+       }
+      .advantages_item_feature .advantages_title::before{
+        display: none;
+       }
+    .advantages_description{
+      margin: 0;
+      }
     .advantages_item.blue{
       background-color: var(--backround-blue);
+      color: var(--text-white);
     }
-      /*
+    .advantages_item_feature{
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 80px 85px 81px;
+    }
+    .advantages_item_feature .advantages_title,
+    .advantages_item_feature img{
+      margin: 0 0 30px 0;
+    }
 
-
-
-.card_img .advantages_title::before{
-  display: block;
-  width:60px;
-  height: 2px;
-  background-color: var(--pseudo-color-grey);
-  content: '';
-  position: absolute;
-  top:86px;
-  right:85px;}
-
-.tile_1 .advantages_title::before{
-  display: block;
-  width:60px;
-  height: 2px;
-  background-color: var(--pseudo-color-black);
-  content: '';
-  position: absolute;
-  top:86px;
-  right:85px;}
-
-.advantages_description{
-  margin: 0;
-  }
-.advantages_item.blue{
-  background-color: var(--backround-blue);
-  color: var(--text-white);
-}
-.tile_1 .advantages_title,
-.tile_1 .advantages_title{
-  color: var(--text-black);
-}
-
-.tile_1 .advantages_description,
-.tile_2 .advantages_description{
-  color: var(--text-gray);
-}
-.advantages_item.road{
-  background-color: var(--backround-second-2);
-}
-.advantages_item.food{
-  background-color: var(--backround-white);
-}
-.advantages_block_text img{
-  margin-bottom: 30px;
-}
-.tile_2 .advantages_title{
-  margin: 0 0 30px 0;
-   }*/
  /*................SEARCH HOTELS.....................*/
 .hotel{
   width: 100%;

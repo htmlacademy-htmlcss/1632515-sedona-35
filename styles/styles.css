@@ -222,7 +222,6 @@ body{
   .advantages_list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:  "town   img    img"
                           "square road   tourist"
                           "bridge bridge devil"
@@ -304,7 +303,7 @@ body{
     }
     .advantages_item_feature{
       display: grid;
-      place-items: center;
+      justify-items: center;
       text-align: center;
       padding: 80px 85px 81px;
     }
@@ -586,7 +585,20 @@ user-select: none;
   margin-right: 8px;
 }
 /*....................CARD..................*/
+
 .hotel_card_list{
+  display: grid;
+}
+
+
+
+
+
+
+
+
+
+/*.hotel_card_list{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -628,7 +640,11 @@ line-height: 28px;
   justify-content: space-between;
   margin-bottom: 16px;
   color: var(--text-gray);
-}
+}*/
+
+
+
+
 /*button card*/
 .button_line{
   display: flex;

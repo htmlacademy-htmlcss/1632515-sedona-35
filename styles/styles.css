@@ -55,9 +55,11 @@ img {
   --icon-green:rgba(125, 181, 79, 1);
 /*card*/
   --border-card: rgba(230, 230, 230, 1);
+  --border-line:   rgba(117, 98, 87, 1);
 /*pseudo*/
   --pseudo-color-black: rgba(0, 0, 0, 0.3);
-  --pseudo-color-grey:    rgba(255, 255, 255, 0.3);
+  --pseudo-color-grey:  rgba(255, 255, 255, 0.3);
+  --pseudo-color-green: rgba(125, 181, 79, 1);
 
 }
 /*...................................................*/
@@ -141,9 +143,14 @@ body{
     .navigation_list{
       display: flex;
       flex-wrap: wrap;
-      max-width: 400px;
+      max-width: 470px;
       margin-left: 168px;
       margin-right: auto;
+    }
+    .navigation_link_current{
+      text-decoration: underline;
+      text-decoration-color: var(--border-line);
+      text-underline-offset: 25px;
     }
 
     .navigation_link{
@@ -153,19 +160,45 @@ body{
       font-weight: 700;
       color:var(--text-black);
     }
-
     .navigation_user{
       display: flex;
      }
+    .box_user_icon{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 220px;
+      margin-right: 20px;
+    }
+    .box_user_icon .navigation_link{
+      padding: 22px 12px;
+    }
+    .like{
+      position: relative;
+    }
+    .like::before{
+      content: '12';
+      position: absolute;
+      display: block;
+      width:20px;
+      height: 20px;
+      border: none;
+      border-radius: 50%;
+      background-color: var(--pseudo-color-green);
+      color: var(--text-white);
+      font-size: 10px;
+      line-height: 10px;
+      font-weight: 400;
+      padding: 5px 5px 5px 4px;
+      top: 10px;
+      left: 20px;
+       }
+
     .navigation_user .navigation_link{
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 64px;
       min-width: 44px;
-    }
-    .navigation_item.like{
-      margin-right: 20px;
     }
     .button_item{
       min-width: 160px;
@@ -176,6 +209,7 @@ body{
       font-weight: 700;
       line-height: 20px;
       text-transform: uppercase;
+      text-align: center;
       color: var(--text-white);
       background-color: var(--button-brown);
       border-radius: 4px;

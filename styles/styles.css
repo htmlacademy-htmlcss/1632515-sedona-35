@@ -181,7 +181,7 @@ body{
       display: block;
       width:20px;
       height: 20px;
-      border: none;
+      border:none;
       border-radius: 50%;
       background-color: var(--pseudo-color-green);
       color: var(--text-white);
@@ -238,16 +238,21 @@ body{
   margin-top: 51px;
     }
 .about_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--backround-white);
   color: var(--text-black);
     }
   .sup_about_title{
      text-align: center;
-    width: 800px;
+    max-width: 800px;
     margin: 70px auto 25px;
   }
   .description_about_title{
     text-align: center;
+    padding: 0 270px;
     margin: 0 auto 90px;
     color: var(--text-gray);
 
@@ -363,6 +368,7 @@ body{
      justify-content: center;
      align-items: center;
      text-align: center;
+     padding: 0 200px;
     }
 .button_search_hotel {
   font-size: 20px;
@@ -395,6 +401,7 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 justify-content: center;
+padding: 0 250px;
 }
 
 .subscribe_form{
@@ -456,6 +463,9 @@ margin: 0 auto 20px;
   }
  .footer_item_link{
   padding: 13px 12px;
+ }
+ .contact_footer{
+  max-width: 500px;
  }
  .footer_contacts_phone {
   color: var(--text-black);
@@ -646,32 +656,28 @@ user-select: none;
 .hotel_item{
   border-radius: 4px;
   outline: 2px solid var(--border-card);
-  width: 340px;
   min-height: 438px;
   padding: 20px;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-.hotel_item{
-  border-radius: 4px;
-  outline: 2px solid var(--border-card);
-  width: 340px;
-  min-height: 438px;
-  padding: 20px;
-  margin: 0;
-}
 .hotel_card_title{
-  margin: 16px 0;
+  margin:0;
+  padding: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  }
+  .hotel_card_image{
+    margin-bottom: 16px;
   }
   .hotel_card_link{
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     color: var(--text-black);
+    margin-bottom: 16px;
     }
     .price_line{
       display: flex;
@@ -679,22 +685,28 @@ user-select: none;
       margin-bottom: 16px;
       color: var(--text-gray);
     }
+    .price_line span{
+      max-width: 140px;
+    }
 /*button card*/
 .button_line{
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
+  align-items: center;
 }
 .button_card{
 font-weight: 700;
 font-size: 16px;
 line-height: 20px;
 text-transform: uppercase;
+text-align: center;
 color: var(--text-white);
 border:none;
 border-radius: 4px;
 user-select: none;
 cursor: pointer;
+max-width: 140px;
 }
 .more{
   padding: 8px 26px;
@@ -713,6 +725,10 @@ cursor: pointer;
   display: flex;
   justify-content: space-between;
   margin: 0;
+  align-items: center;
+}
+.stars{
+ max-width: 140px;
 }
 .rating{
   font-weight: 400;

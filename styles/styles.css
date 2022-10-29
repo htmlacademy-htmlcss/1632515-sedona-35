@@ -21,7 +21,7 @@
 img {
   max-width: 100%;
   object-fit: contain;
-  vertical-align: top;
+
 }
 :root{
 /*button*/
@@ -32,7 +32,12 @@ img {
   --button-hover-green:rgba(108, 158, 66, 1);
   --button-hover-blue: rgba(104, 162, 202, 1);
   --button-hover-brown:rgba(97, 80, 72, 1);
+  --button-hover-black:rgba(0, 0, 0, 1);
+  --button-hover-grey: rgba(229, 229, 229, 1);
 
+  --opacity-brown: rgba(117, 97, 87, 1);
+  --opacity-blue:  rgba(130, 179, 211, 1);
+  --opacity-green: rgba(125, 181, 79, 1);
 /*text*/
   --text-black:  rgba(0, 0, 0, 1);
   --text-gray:   rgba(51, 51, 51, 1);
@@ -53,6 +58,7 @@ img {
   --icon-black:rgba(0, 0, 0, 1);
   --icon-blue: rgba(131, 179, 211, 1);
   --icon-green:rgba(125, 181, 79, 1);
+  --icon-grey:   rgba(229, 229, 229, 1);
 /*card*/
   --border-card: rgba(230, 230, 230, 1);
   --border-line:   rgba(117, 98, 87, 1);
@@ -126,7 +132,76 @@ body{
   margin: 0;
   padding: 0;
 }
+/*..............DECORATION....................*/
+            /*text*/
+.text_decoration:hover{
+  color: var(--opacity-brown);
+}
+.text_decoration:active{
+  opacity: 0.3;
+}
+            /*brown*/
+.button_brown:hover{
+  background-color: var(--button-hover-brown);
+}
+.button_brown:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-brown);
+}
 
+            /*blue*/
+.button_blue:hover{
+  background-color: var(--button-hover-blue);
+}
+.button_blue:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-blue);
+}
+          /*green*/
+.button_green:hover{
+  background-color: var(--button-hover-green);
+}
+.button_green:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-green);
+}
+          /*transparent*/
+.button_transparent:hover{
+  opacity: 0.6;
+}
+.button_transparent:active{
+  opacity: 0.3;
+}
+.button_transparent:focus{
+  outline: 2px solid var(--button-blue);
+}
+ @supports selector(:focus-visible) {
+  .button_transparent:focus {
+    outline: none;
+  }
+  .button_transparent:focus-visible {
+    outline: 2px solid var(--button-blue);
+  }
+}
+          /*filter list*/
+.veiw_button:hover{
+  outline: 2px solid var(--button-hover-black);
+}
+
+.veiw_button:focus{
+  outline: 2px solid var(--button-hover-blue);
+}
+@supports selector(:focus-visible) {
+  .veiw_button:focus {
+    outline: none;
+  }
+  .veiw_button:focus-visible {
+    outline: 2px solid var(--button-blue);
+  }
+}
+.veiw_button:active{
+  outline: 2px solid var(--button-hover-black);
+}
 
     /*..............HEADER...................*/
     .navigation_header__content,
@@ -188,6 +263,7 @@ body{
       font-size: 10px;
       line-height: 10px;
       font-weight: 400;
+      text-align: center;
       padding: 5px 5px 5px 4px;
       top: 10px;
       left: 20px;
@@ -201,9 +277,8 @@ body{
       min-width: 44px;
     }
     .button_item{
-      min-width: 160px;
+      max-width: 160px;
     }
-
     .button_header_link{
       font-size: 16px;
       font-weight: 700;
@@ -262,96 +337,70 @@ body{
   .advantages_list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:  "town   img    img"
-                          "square road   tourist"
-                          "bridge bridge devil"
-                          "home   food   gift";
   }
-   .advantages_item{
-    display: grid;
+  .advantages_item{
+    display: flex;
+  }
+  .img_card{
+    grid-column: 1/-1;
+  }
+  .advantages_item.blue{
+    background-color: var(--backround-blue);
+    color: var(--text-white);
+  }
+  .block_text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     padding: 92px 85px 111px;
-    margin: 0;
     text-align: center;
-    background-color: var(--backround-second-1);
-    max-height: 384px;
   }
-  .advantages_item.text_card{
+  .text_card .block_text{
     padding: 103px 85px 121px;
   }
-  .card_town{
-    grid-area: town;
-  }
-  .img_town{
-    grid-area: img;
-  }
-  .square{
-    grid-area: square;
-  }
-  .road{
-    grid-area: road;
-    background-color: var(--backround-second-2);
-  }
-  .tourist{
-    grid-area: tourist;
-  }
-  .img_bridge{
-    grid-area: bridge;
-  }
-  .devil{
-    grid-area: devil;
-  }
-  .home{
-    grid-area: home;
-  }
-  .food{
-    grid-area: food;
-    background-color: var(--backround-white);
-  }
-  .gift{
-    grid-area: gift;
-  }
-  .advantages_title{
+   .advantages_title{
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
     margin: 0 0 62px 0;
     padding: 0;
+    width: 100%;
     position: relative;
     }
-    .advantages_title::before{
-      display: block;
-      width:60px;
-      height: 2px;
-      background-color: var(--pseudo-color-black);
-      content: '';
-      position: absolute;
-      right: 85px;
-       bottom: -30px;}
-       .blue .advantages_title::before{
-        background-color: var(--pseudo-color-grey);
-       }
-      .advantages_item_feature .advantages_title::before{
-        display: none;
-       }
     .advantages_description{
       margin: 0;
       }
-    .advantages_item.blue{
-      background-color: var(--backround-blue);
-      color: var(--text-white);
+    .advantages_title::after{
+      content: '';
+      position: absolute;
+      width:60px;
+      height: 2px;
+      right: 85px;
+      bottom: -30px;
+      background-color: var(--pseudo-color-black);
     }
-    .advantages_item_feature{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 80px 85px 81px;
-    }
-    .advantages_item_feature .advantages_title,
-    .advantages_item_feature img{
-      margin: 0 0 30px 0;
-    }
+  .blue .advantages_title::after{
+   background-color: var(--pseudo-color-grey);
+  }
+  .advantages_item_feature .advantages_title::after{
+   display: none;
+  }
+
+
+  .advantages_item_feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 85px 81px;
+  }
+  .advantages_item_feature .advantages_title,
+  .advantages_item_feature img{
+    margin: 0 0 30px 0;
+  }
+
 
  /*................SEARCH HOTELS.....................*/
 .hotel{
@@ -462,6 +511,9 @@ margin: 0 auto 20px;
     min-height: 14px;
   }
  .footer_item_link{
+  display: flex;
+    justify-content: center;
+    align-items: center;
   padding: 13px 12px;
  }
  .contact_footer{
@@ -496,18 +548,32 @@ color: var(--text-white);
 
 margin: 0;
 }
+/*  breadcrumbs  */
 .breadcrumbs_list{
   display: flex;
+  flex-wrap: wrap;
   margin:8px 0 40px;
 }
 .breadcrumbs_item{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin-bottom: 5px;
 }
-.breadcrumbs_item.arrow{
-  margin: 0 11px;
+.breadcrumbs_item:not(:last-child){
+  margin-right: 28px;
 }
+.breadcrumbs_item:not(:last-child)::before{
+content: '';
+position: absolute;
+width: 8px;
+height: 20px;
+right: -18px;
+top: 5px;
+background: url(../img/svg/icon/breadcrumb/arrow.svg) no-repeat;
+}
+
  .breadcrumbs_link{
   color: var(--text-white);
   font-size: 16px;
@@ -567,7 +633,7 @@ margin-top: 56px;
   background-color: var(--button-blue);
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: var(--text-white);
   border-radius:4px;
@@ -628,7 +694,7 @@ border:2px solid var(--form-element-1);
   justify-content: center;
   align-items: center;
 border-radius: 4px;
-outline: 2px solid var(--icon-black);
+outline: 2px solid var(--icon-grey);
 padding: 13px 14px;
 user-select: none;
 }
@@ -743,25 +809,26 @@ max-width: 140px;
 .pagination_list {
 display: flex;
 align-items: center;
-
+flex-wrap: wrap;
 }
 .pagination_item{
-  min-height: 60px;
-  padding-top: 10px;
+  margin-bottom: 8px;
 
-}
+  }
 .pagination_item:not(:last-child){
   margin-right: 8px;
 }
 
 .pagination_link{
+  min-width: 60px;
   display: block;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  text-align: center;
   color: var(--text-white);
-  padding: 12px 24px;
+  padding: 12px 0;
   background-color: var(--backround-blue);
   border:none;
   border-radius: 4px;
@@ -775,7 +842,10 @@ align-items: center;
   font-size: 20px;
   line-height: 36px;
   margin: 0;
-  padding: 16px 22px;
+  max-height: 60px;
+  min-width: 60px;
+  text-align: center;
+  padding: 16px 0;
   border:none;
   border-radius: 4px;
 }

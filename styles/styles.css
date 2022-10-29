@@ -187,6 +187,7 @@ body{
 .veiw_button:hover{
   outline: 2px solid var(--button-hover-black);
 }
+          /*veiw*/
 
 .veiw_button:focus{
   outline: 2px solid var(--button-hover-blue);
@@ -202,6 +203,7 @@ body{
 .veiw_button:active{
   outline: 2px solid var(--button-hover-black);
 }
+
 
     /*..............HEADER...................*/
     .navigation_header__content,

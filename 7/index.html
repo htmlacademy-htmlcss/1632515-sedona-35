@@ -27,22 +27,28 @@
           <!--nav list-->
           <ul class="navigation_list list">
             <li class="navigation_item main">
-              <a class="navigation_link navigation_link_current link" href="#"
+              <a
+                class="navigation_link text_decoration navigation_link_current link"
+                href="#"
                 >Главная</a
               >
             </li>
             <li class="navigation_item about">
-              <a class="navigation_link link" href="#">О седоне</a>
+              <a class="navigation_link text_decoration link" href="#"
+                >О седоне</a
+              >
             </li>
             <li class="navigation_item hostel">
-              <a class="navigation_link link" href="hotels.html">Гостиницы</a>
+              <a class="navigation_link text_decoration link" href="hotels.html"
+                >Гостиницы</a
+              >
             </li>
           </ul>
           <!--nav user-->
           <ul class="navigation_user list">
             <div class="box_user_icon">
               <li class="navigation_item search">
-                <a class="navigation_link link" href="#">
+                <a class="navigation_link text_decoration link" href="#">
                   <img
                     class="navigation_item_img"
                     src="img/svg/icon/header/magnifier.svg"
@@ -53,7 +59,7 @@
                 </a>
               </li>
               <li class="navigation_item like">
-                <a class="navigation_link link" href="#">
+                <a class="navigation_link text_decoration link" href="#">
                   <img
                     class="navigation_item_img"
                     src="img/svg/icon/header/heart.svg"
@@ -65,7 +71,7 @@
               </li>
             </div>
             <li class="button_item">
-              <a class="button_header_link link" href="#">
+              <a class="button_header_link button_brown link" href="#">
                 <span class="navigation_button_title">Хочу сюда! </span>
               </a>
             </li>
@@ -100,13 +106,13 @@
 
           <ul class="advantages_list list">
             <!--img card town-->
-            <li class="advantages_item card_town blue">
-              <h3 class="advantages_title">Настоящий городок</h3>
-              <p class="advantages_description">
-                Седона — не аттракцион для туристов, там течёт своя жизнь
-              </p>
-            </li>
-            <li class="advantages_img img_town">
+            <li class="advantages_item img_card blue">
+              <div class="block_text">
+                <h3 class="advantages_title">Настоящий городок</h3>
+                <p class="advantages_description">
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
+              </div>
               <img
                 class="img_town"
                 src="img/jpeg/advantage/town.jpg"
@@ -117,46 +123,52 @@
             </li>
             <!--row card square road tourist -->
             <li class="advantages_item text_card square">
-              <h3 class="advantages_title">Небольшая площадь</h3>
-              <p class="advantages_description">
-                Все достопримечательности находятся очень близко
-              </p>
+              <div class="block_text">
+                <h3 class="advantages_title">Небольшая площадь</h3>
+                <p class="advantages_description">
+                  Все достопримечательности находятся очень близко
+                </p>
+              </div>
             </li>
             <li class="advantages_item text_card road">
-              <h3 class="advantages_title">
-                Красивая<br />
-                дорога
-              </h3>
-              <p class="advantages_description">
-                Ехать в Седону из Лас-Вегаса совсем не скучно!
-              </p>
+              <div class="block_text">
+                <h3 class="advantages_title">
+                  Красивая<br />
+                  дорога
+                </h3>
+                <p class="advantages_description">
+                  Ехать в Седону из Лас-Вегаса совсем не скучно!
+                </p>
+              </div>
             </li>
             <li class="advantages_item text_card tourist">
-              <h3 class="advantages_title">
-                Мало <br />
-                туристов
-              </h3>
-              <p class="advantages_description">
-                Большинство едет в Гранд Каньон и толпится там
-              </p>
+              <div class="block_text">
+                <h3 class="advantages_title">
+                  Мало <br />
+                  туристов
+                </h3>
+                <p class="advantages_description">
+                  Большинство едет в Гранд Каньон и толпится там
+                </p>
+              </div>
             </li>
             <!--img card2 bridge-->
-            <li class="advantages_img img_bridge">
+            <li class="advantages_item img_card blue">
               <img
                 src="img/jpeg/advantage/bridge.jpg"
                 width="800"
                 height="384"
                 alt="Изображение моста дьявола."
               />
-            </li>
-            <li class="advantages_item devil blue">
-              <h3 class="advantages_title">
-                Там есть <br />
-                мост дьявола
-              </h3>
-              <p class="advantages_description">
-                Да, по нему можно пройти! Если вы осмелитесь, разумеется
-              </p>
+              <div class="block_text">
+                <h3 class="advantages_title">
+                  Там есть <br />
+                  мост дьявола
+                </h3>
+                <p class="advantages_description">
+                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                </p>
+              </div>
             </li>
             <!--row card2 home food gift -->
             <li class="advantages_item_feature home">
@@ -168,7 +180,7 @@
               />
               <h3 class="advantages_title">Жильё</h3>
               <p class="advantages_description">
-                Рекомендуем пожитьв настоящем мотеле,всё как в кино!
+                Рекомендуем пожить в настоящем мотеле,всё как в кино!
               </p>
             </li>
             <li class="advantages_item_feature food">
@@ -208,7 +220,7 @@
               <br />
               и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <a href="hotels.html" class="button_search_hotel link">
+            <a href="hotels.html" class="button_search_hotel button_brown link">
               поиск гостиницы в седоне
             </a>
           </div>
@@ -235,7 +247,7 @@
                   required
                 />
               </label>
-              <button class="subscribe_button" type="submit">
+              <button class="subscribe_button button_blue" type="submit">
                 подписаться
                 <span class="visually_hidden"> Отправить. </span>
               </button>
@@ -295,7 +307,10 @@
           </section>
           <section class="contact_footer">
             <h2 class="visually_hidden">Контакты.</h2>
-            <a class="footer_contacts_phone link" href="tel:+78128121212">
+            <a
+              class="footer_contacts_phone text_decoration link"
+              href="tel:+78128121212"
+            >
               +7 (812) 812-12-12
             </a>
           </section>

@@ -136,27 +136,6 @@ body{
   padding: 0;
 }
 /*..............DECORATION....................*/
-      /*social_icon*/
-.footer_item_link:hover{
-  color: var(--hover-blue);
-}
-.footer_item_link:focus{
-  color: var(--focus-blue);
-}
-.footer_item_link:active{
-  color: var(--opacity-blue-second);
-}
-          /*text*/
-.text_decoration:hover{
-  color: var(--opacity-brown);
-}
-.text_decoration:focus-visible {
-  color: var(--opacity-brown);
-  }
-.text_decoration:active{
-  opacity: 0.3;
-}
-
 
             /*brown*/
 .button_brown:hover{
@@ -209,7 +188,7 @@ body{
     outline: 2px solid var(--button-blue);
   }
 }
-          /*filter list*/
+/*filter_list*/
 .veiw_button:hover{
   outline: 2px solid var(--hover-black);
 }
@@ -218,17 +197,48 @@ body{
 .veiw_button:focus{
   outline: 2px solid var(--hover-blue);
 }
-@supports selector(:focus-visible) {
-  .veiw_button:focus {
-    outline: none;
-  }
-  .veiw_button:focus-visible {
-    outline: 2px solid var(--button-blue);
-  }
-}
+
 .veiw_button:active{
   outline: 2px solid var(--hover-black);
 }
+              /*social_icon*/
+ .footer_item_link:hover{
+  color: var(--hover-blue);
+}
+.footer_item_link:focus{
+  color: var(--focus-blue);
+}
+.footer_item_link:active{
+  color: var(--opacity-blue-second);
+}
+          /*text*/
+.text_decoration:hover{
+  color: var(--opacity-brown);
+}
+.text_decoration:focus-visible {
+  color: var(--opacity-brown);
+  }
+.text_decoration:active{
+  opacity: 0.3;
+}
+      /*select_control*/
+.select_control:hover{
+outline: 2px solid var(--hover-blue);
+}
+.select_control:focus{
+    outline: 2px solid var(--hover-blue);
+  }
+@supports selector(:focus-visible) {
+.select_control:focus {
+      outline: none;
+    }}
+  .select_control:focus-visible {
+      outline: 2px solid var(--hover-blue);
+    }
+  .select_control:active{
+    outline: 2px solid var(--form-input);
+  }
+
 
 
     /*..............HEADER...................*/
@@ -498,6 +508,7 @@ margin: 0 auto 20px;
   font-family: inherit;
   font-size: inherit;
   line-height: 24px;
+  padding: 14px 20px;
   border-radius: 5px 0 0 5px;
   border:none;
   background-color: var(--form-element-2);

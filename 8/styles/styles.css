@@ -135,110 +135,6 @@ body{
   margin: 0;
   padding: 0;
 }
-/*..............DECORATION....................*/
-
-            /*brown*/
-.button_brown:hover{
-  background-color: var(--hover-brown);
-}
-.button_brown:focus{
-  background-color: var(--hover-brown);
-  }
-.button_brown:active{
-  color:var(--text-opacity);
-  background-color: var(--opacity-brown);
-}
-            /*blue*/
-.button_blue:hover{
-  background-color: var(--hover-blue);
-}
-.button_blue:focus{
-  background-color: var(--focus-blue);
-}
-.button_blue:active{
-  color:var(--text-opacity);
-  background-color: var(--opacity-blue);
-}
-          /*green*/
-.button_green:hover{
-  background-color: var(--hover-green);
-}
-.button_green:focus{
-  background-color: var(--hover-green);
-}
-.button_green:active{
-  color:var(--text-opacity);
-  background-color: var(--opacity-green);
-}
-          /*transparent*/
-.button_transparent:hover{
-  opacity: 0.6;
-}
-.button_transparent:active{
-  opacity: 0.3;
-}
-.button_transparent:focus{
-  outline: 2px solid var(--button-blue);
-}
- @supports selector(:focus-visible) {
-  .button_transparent:focus {
-    outline: none;
-  }
-  .button_transparent:focus-visible {
-    outline: 2px solid var(--button-blue);
-  }
-}
-/*filter_list*/
-.veiw_button:hover{
-  outline: 2px solid var(--hover-black);
-}
-          /*veiw*/
-
-.veiw_button:focus{
-  outline: 2px solid var(--hover-blue);
-}
-
-.veiw_button:active{
-  outline: 2px solid var(--hover-black);
-}
-              /*social_icon*/
- .footer_item_link:hover{
-  color: var(--hover-blue);
-}
-.footer_item_link:focus{
-  color: var(--focus-blue);
-}
-.footer_item_link:active{
-  color: var(--opacity-blue-second);
-}
-          /*text*/
-.text_decoration:hover{
-  color: var(--opacity-brown);
-}
-.text_decoration:focus-visible {
-  color: var(--opacity-brown);
-  }
-.text_decoration:active{
-  opacity: 0.3;
-}
-      /*select_control*/
-.select_control:hover{
-outline: 2px solid var(--hover-blue);
-}
-.select_control:focus{
-    outline: 2px solid var(--hover-blue);
-  }
-@supports selector(:focus-visible) {
-.select_control:focus {
-      outline: none;
-    }}
-  .select_control:focus-visible {
-      outline: 2px solid var(--hover-blue);
-    }
-  .select_control:active{
-    outline: 2px solid var(--form-input);
-  }
-
 
 
     /*..............HEADER...................*/
@@ -636,16 +532,48 @@ background: url(../img/svg/icon/breadcrumb/arrow.svg) no-repeat;
   .catalog_filter_item:not(:last-child){
 margin-bottom: 16px;
   }
+ .control {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+  }
 .control_input{
   margin-right: 16px;
 }
-input[type="checkbox"],
-input[type="radio"]{
-  transform:scale(1.8);
+.control_mark{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--backround-white);
+}
+.control_input[type="checkbox"]:checked + .control_mark::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background: url(../img/svg/icon/control/checked.svg);
+ }
+.control_input[type="radio"] + .control_mark {
+  border-radius: 50%;
 }
 
-
+.control_input[type="radio"]:checked + .control_mark::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--form-input);
+  border-radius: 50%;
+}
 .catalog_filter_group{
+  margin:0;
   padding: 0;
   border:none;
   color: var(--text-white);
@@ -897,3 +825,119 @@ flex-wrap: wrap;
   background-color: var(--backround-white);
   padding: 96px 0 104px;
   }
+
+
+
+
+ /*..............DECORATION....................*/
+
+            /*brown*/
+.button_brown:hover{
+  background-color: var(--hover-brown);
+}
+.button_brown:focus{
+  background-color: var(--hover-brown);
+  }
+.button_brown:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-brown);
+}
+            /*blue*/
+.button_blue:hover{
+  background-color: var(--hover-blue);
+}
+.button_blue:focus{
+  background-color: var(--focus-blue);
+}
+.button_blue:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-blue);
+}
+          /*green*/
+.button_green:hover{
+  background-color: var(--hover-green);
+}
+.button_green:focus{
+  background-color: var(--hover-green);
+}
+.button_green:active{
+  color:var(--text-opacity);
+  background-color: var(--opacity-green);
+}
+          /*transparent*/
+.button_transparent:hover{
+  opacity: 0.6;
+}
+.button_transparent:active{
+  opacity: 0.3;
+}
+.button_transparent:focus{
+  outline: 2px solid var(--button-blue);
+}
+ @supports selector(:focus-visible) {
+  .button_transparent:focus {
+    outline: none;
+  }
+  .button_transparent:focus-visible {
+    outline: 2px solid var(--button-blue);
+  }
+}
+/*filter_list*/
+.veiw_button:hover{
+  outline: 2px solid var(--hover-black);
+}
+          /*veiw*/
+
+.veiw_button:focus{
+  outline: 2px solid var(--hover-blue);
+}
+
+.veiw_button:active{
+  outline: 2px solid var(--hover-black);
+}
+              /*social_icon*/
+ .footer_item_link:hover{
+  color: var(--hover-blue);
+}
+.footer_item_link:focus{
+  color: var(--focus-blue);
+}
+.footer_item_link:active{
+  color: var(--opacity-blue-second);
+}
+          /*text*/
+.text_decoration:hover{
+  color: var(--opacity-brown);
+}
+.text_decoration:focus-visible {
+  color: var(--opacity-brown);
+  }
+.text_decoration:active{
+  opacity: 0.3;
+}
+      /*select_control*/
+.select_control:hover{
+outline: 2px solid var(--hover-blue);
+}
+.select_control:focus{
+    outline: 2px solid var(--hover-blue);
+  }
+@supports selector(:focus-visible) {
+.select_control:focus {
+      outline: none;
+    }}
+  .select_control:focus-visible {
+      outline: 2px solid var(--hover-blue);
+    }
+  .select_control:active{
+    outline: 2px solid var(--form-input);
+  }
+
+/* control checbox*/
+.control_input:focus .control_mark {
+ outline: 5px solid var(--focus-blue);
+}
+
+.control_input:disabled + .control_mark {
+  border-color: #242424;
+}

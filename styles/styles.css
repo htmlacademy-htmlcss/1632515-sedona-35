@@ -909,6 +909,19 @@ flex-wrap: wrap;
   border-radius: 30px;
   background-color: #ffffff;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+.modal_content{
+  position: relative;
+}
+.modal_close_button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../img/svg/icon/modal/tooltip_close.svg') 50% no-repeat;
+  background-color: var(--form-element-2);
+  border: 0;
+  border-radius: 50%;
+  padding: 20px;
 
 }
 .modal_title{
@@ -961,6 +974,7 @@ max-width: 120px;
       opacity: 0.3;
     }
     .field_message{
+      display: block;
       margin-left: 137px;
       padding: 0 20px;
     }
@@ -987,6 +1001,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .select_numbers{
   display: grid;
   grid-template-columns: 40px 31px 40px;
+  margin-left: 46px;
   }
   .button_changes_number{
     background-color: var(--form-element-2);
@@ -1067,6 +1082,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 400;
   text-transform:none;
   padding: 15px 18px 18px 22px;
+  margin-top: 15px;
   border-radius: 10px;
   display: block;
   width: 256px;
@@ -1079,6 +1095,19 @@ input[type="number"]::-webkit-inner-spin-button {
   .tooltip_toggle:hover + .tooltip_text,
   .tooltip_toggle:focus + .tooltip_text {
     display: block;
+  }
+  .tooltip_text::before {
+    content:'';
+    background-image: url("../img/svg/icon/modal/arrow_tooltip.svg");
+    width: 19px;
+    height: 9px;
+    position:absolute;
+    top: 0;
+    left:0;
+    right:0;
+    transform: translateY(-100%);
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .button_modal{

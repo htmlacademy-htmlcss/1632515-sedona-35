@@ -372,13 +372,14 @@
 
   <div class="modal_container dis able ">
     <div class="modal modal_search">
-      <button class="modal_close_button">
-      <span class="visually_hidden">Закрыть</span>
-      </button>
+
       <section class="modal_content">
         <h1 class="modal_title">
           поиск гостиницы в седоне
         </h1>
+        <button class="modal_close_button">
+          <span class="visually_hidden">Закрыть</span>
+        </button>
           <form class="inputs_modal"
                 action="https://echo.htmlacademy.ru/"
                 method="post">
@@ -485,14 +486,14 @@
                                 d="M.4 0h2v2h-2V0Zm2 12h-2V3h2v9Z"/>
                           </svg>
                       </button>
-                      <span class="tooltip_text">
+                      <span class="tooltip_text" role="tooltip" id="tooltip_label_date">
                         Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
                         Дети до 6 лет размещаются бесплатно.
                       </span>
                     </span>
 
                   <div class="select_numbers">
-                    <button class="button_changes_min button_changes_number" type="button">
+                    <button class="button_changes_min button_changes_number" type="button" aria-labelledby="tooltip_label_date">
                       <span class="visually_hidden">Кнопка уменьшающая количество детей.</span>
                     </button>
                     <input
@@ -519,38 +520,3 @@
   </div>
   </body>
 </html>
-
-
-<form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-
-    <label class="search-form-label adults" for="adults">Взрослые:</label>
-    <div class="quantity quantity-adults">
-      <button class="search-button-min" type="button">
-        <span class="visually-hidden">Кнопка уменьшающая количество взрослых.</span>
-      </button>
-      <input class="amount-form-field field" type="number" step="1" id="adults" name="adults-amound" value="2" required>
-      <button class="search-button-max" type="button">
-        <span class="visually-hidden">Кнопка увеличивающая количество взрослых.</span>
-      </button>
-    </div>
-    <span class="children">
-      <label class="search-form-label children-label" for="children">Дети:</label>
-      <span class="visually-hidden">Пояснение - каких детей стоит учитывать при поиске гостиницы.</span>
-      <span class="tooltip">
-        <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-children">
-        </button>
-        <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-      </span>
-      </span>
-    <div class="quantity quantity-children">
-      <button class="search-button-min" type="button">
-        <span class="visually-hidden">Кнопка уменьшающая количество детей.</span>
-      </button>
-      <input class="amount-form-field field" type="number" step="1" id="children" name="children-amount" value="2" required>
-      <button class="search-button-max" type="button">
-        <span class="visually-hidden">Кнопка увеличивающая количество детей.</span>
-      </button>
-      <span class="search-button-focus"></span>
-    </div>
-    <button class="search-form-button button" type="submit">Найти</button>
-</form>

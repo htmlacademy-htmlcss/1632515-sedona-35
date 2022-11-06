@@ -55,6 +55,7 @@ img {
   --backround-second-2:rgba(131, 179, 211, 0.2);
   --background-gray:rgba(255, 255, 255, 0.3);
   --background-safe:   rgb(117,97,84);
+  --background-tooltip: rgb(51,51,51); ;
 /*form*/
   --form-input:    rgba(63, 94, 114, 1);
   --form-element-1:rgba(229, 229, 229, 1);
@@ -1037,7 +1038,10 @@ input[type="number"]::-webkit-inner-spin-button {
     transform: rotate(90deg);
     background-color: var(--opacity-brown-2);
   }
-
+.tooltip{
+  padding: 11px;
+  position: relative;
+}
 .tooltip_toggle{
   border: none;
   background-color: transparent;
@@ -1046,7 +1050,6 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 50%;
   display: block;
   background-color: var(--button-blue);
-  position: relative;
 }
 .tooltip-icon {
   width: 100%;
@@ -1054,21 +1057,28 @@ input[type="number"]::-webkit-inner-spin-button {
   display: block;
 }
 
-.tooltip-toggle:hover .tooltip-icon {
-  color: #AF7842;
-}
+
 .tooltip_text {
-  background-color: #242424;
+  background-color: var(--background-tooltip);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  text-transform: none;
+  text-transform:none;
   padding: 15px 18px 18px 22px;
   border-radius: 10px;
   display: block;
   width: 256px;
+  z-index: 1;
   position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  display: none;
+  }
+  .tooltip_toggle:hover + .tooltip_text,
+  .tooltip_toggle:focus + .tooltip_text {
+    display: block;
   }
 
 .button_modal{

@@ -80,7 +80,7 @@
                       d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
                     />
                   </svg>
-                  <span class="like_counts button_green">12</span>
+                  <span class="like_counts">12</span>
                 </a>
               </li>
             </div>
@@ -287,9 +287,9 @@
             <!--Сортировка-->
 
             <select class="select_control" aria-label="Сортировка">
-              <option value="popular">Сначала популярные</option>
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
             </select>
             <!--Вид отображения-->
             <div class="veiw_bar">
@@ -349,7 +349,6 @@
                 <a class="button_card button_blue chose link" href="#">
                   в избранное
                 </a>
-                <!-- <a class="button_card favorites link" href="#"> в избранном </a> -->
               </div>
               <!--рейтинг-->
               <div class="rating_line">
@@ -760,6 +759,154 @@
           </section>
         </div>
       </footer>
+    </div>
+    <div class="modal_container disabled_modal">
+      <div class="modal modal_search">
+        <section class="modal_content">
+          <h1 class="modal_title">поиск гостиницы в седоне</h1>
+          <button class="modal_close_button">
+            <span class="visually_hidden">Закрыть</span>
+          </button>
+          <form
+            class="inputs_modal"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <div class="wrapper_input_block">
+              <label
+                for="date_arrival"
+                class="date_block arrival"
+                title="Укажите дату"
+              >
+                <span class="input_label">дата заезда:</span>
+                <div class="wrapper_field">
+                  <input
+                    type="text"
+                    class="date_field field_arrival"
+                    id="date_arrival"
+                    name="date_arrival"
+                    placeholder="Укажите дату"
+                    value="27 апреля 2020"
+                    required
+                  />
+                </div>
+              </label>
+              <span class="field_message message_error">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </div>
+            <div class="wrapper_input_block">
+              <label for="date_out" class="date_block out" title="Укажите дату">
+                <span class="input_label">дата выезда:</span>
+                <div class="wrapper_field">
+                  <input
+                    type="text"
+                    class="date_field field_out"
+                    id="date_out"
+                    name="date_out"
+                    placeholder="Укажите дату"
+                    value="1 сентября 2023"
+                  />
+                </div>
+              </label>
+              <span class="field_message">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+            </div>
+
+            <div class="numbers_people">
+              <label for="adult" class="numbers_block adult_numbers">
+                <span class="input_label">взрослые:</span>
+                <div class="select_numbers">
+                  <button
+                    class="button_changes_min button_changes_number"
+                    type="button"
+                  >
+                    <span class="visually_hidden"
+                      >Кнопка уменьшающая количество взрослых.</span
+                    >
+                  </button>
+                  <input
+                    type="number"
+                    class="numbers_input"
+                    id="adult"
+                    name="adult"
+                    value="2"
+                    title="Укажите количество взрослых"
+                  />
+                  <button
+                    class="button_changes_max button_changes_number"
+                    type="button"
+                  >
+                    <span class="visually_hidden"
+                      >Кнопка увеличивающая количество взрослых.</span
+                    >
+                  </button>
+                </div>
+              </label>
+
+              <label for="kids" class="numbers_block kids_numbers">
+                <span class="input_label">дети:</span>
+                <!-- tooltip -->
+                <span class="tooltip">
+                  <button class="tooltip_toggle button_blue" type="button">
+                    <svg
+                      class="tooltip-icon"
+                      width="3"
+                      height="12"
+                      viewBox="0 0 3 12"
+                      fill="#ffffff"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M.4 0h2v2h-2V0Zm2 12h-2V3h2v9Z" />
+                    </svg>
+                  </button>
+                  <span
+                    class="tooltip_text"
+                    role="tooltip"
+                    id="tooltip_label_date"
+                  >
+                    Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+
+                <div class="select_numbers">
+                  <button
+                    class="button_changes_min button_changes_number"
+                    type="button"
+                    aria-labelledby="tooltip_label_date"
+                  >
+                    <span class="visually_hidden"
+                      >Кнопка уменьшающая количество детей.</span
+                    >
+                  </button>
+                  <input
+                    type="number"
+                    class="numbers_input"
+                    id="kids"
+                    name="kids"
+                    value="2"
+                    title="Укажите количество детей"
+                  />
+                  <button
+                    class="button_changes_max button_changes_number"
+                    type="button"
+                  >
+                    <span class="visually_hidden"
+                      >Кнопка увеличивающая количество детей.</span
+                    >
+                  </button>
+                </div>
+              </label>
+            </div>
+
+            <button class="button_modal button_blue" type="submit">
+              Найти
+            </button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>

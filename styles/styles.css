@@ -73,7 +73,8 @@ img {
   --pseudo-color-black: rgba(0, 0, 0, 0.3);
   --pseudo-color-gray:  rgba(255, 255, 255, 0.3);
   --pseudo-color-green: rgba(125, 181, 79, 1);
-
+/*shadow*/
+  --shadow-1: rgba(0, 0, 0, 0.25);
 }
 /*...................................................*/
 html{
@@ -415,10 +416,10 @@ margin: 0 auto 20px;
  background-color:var(--button-blue);
  padding: 8px 50px;
  text-transform: uppercase;
+ font-family: inherit;
  font-weight: 700;
  font-size: 20px;
  line-height: 36px;
- letter-spacing: -2.5px;
  color: var(--text-white);
  border-radius: 0 4px 4px 0;
  user-select: none;
@@ -604,10 +605,10 @@ margin-top: 56px;
 .button_filter {
   background-color: var(--button-blue);
   text-transform: uppercase;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: -1.5px;
   color: var(--text-white);
   border-radius:4px;
   user-select: none;
@@ -713,13 +714,23 @@ border-radius: 4px 0 0 4px;
   padding: 0;
 }
 .select_control{
+  padding: 14px 20px;
 margin-left: auto;
 margin-right: 70px;
 width: 292px;
 min-height: 49px;
 border-radius: 4px;
 border:2px solid var(--form-element-1);
+color: #333333;
+font-family: inherit;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+appearance: none;
+background: url('../img/svg/icon/select/select_arrow.svg') no-repeat right;
+background-position-x: calc(100% - 20px);
 }
+
 /*veiw button*/
 .veiw_bar{
   display: flex;
@@ -728,10 +739,10 @@ border:2px solid var(--form-element-1);
   display: flex;
   justify-content: center;
   align-items: center;
-border-radius: 4px;
-outline: 2px solid var(--icon-gray);
-padding: 13px 14px;
-user-select: none;
+  border-radius: 4px;
+  outline: 2px solid var(--icon-gray);
+  padding: 13px 14px;
+  user-select: none;
 }
 .veiw_button:not(:last-child){
   margin-right: 8px;
@@ -920,12 +931,12 @@ margin-bottom: 55px;
 .modal_close_button{
   position: absolute;
   top: 0;
-  right: 0;
+  right: -17px;
   background: url('../img/svg/icon/modal/tooltip_close.svg') 50% no-repeat;
   background-color: var(--form-element-2);
   border: 0;
   border-radius: 50%;
-  padding: 20px;
+  padding: 25px;
 
 }
 .modal_title{
@@ -933,7 +944,7 @@ margin-bottom: 55px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin-bottom: 64px;
+  margin: 0 0 64px 0;
 }
 .inputs_modal{
   display: flex;
@@ -948,31 +959,30 @@ padding: 12px 0;
 max-width: 120px;
 }
 .wrapper_input_block{
-  margin-bottom: 48px;
+  margin-bottom: 23px;
 }
 .date_block{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+
 }
   .wrapper_field{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    }
+  .date_field{
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    width: 440px;
+    background: url('../img/svg/icon/modal/calendar.svg') 95% 50% no-repeat;
     background-color: var(--form-element-2);
     border: none;
     border-radius: 4px;
     padding: 12px 20px;
-    width: 440px;
-  }
-  .date_field{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    background-color: var(--form-element-2);
-    border: none;
-    width: 160px;
     }
     .modal_field_icon{
       opacity: 0.3;
@@ -981,14 +991,16 @@ max-width: 120px;
       display: block;
       margin-left: 137px;
       padding: 0 20px;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 400;
+      font-family: inherit;
     }
     .message_error{
       color: var(--text-error) ;
     }
 
-.numbers_people{
-  display: flex;
-}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   appearance: none;
@@ -997,6 +1009,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .numbers_people{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 48px;
 }
 .numbers_block{
   display: flex;
@@ -1013,6 +1026,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .numbers_input{
+    font-family: inherit;
     font-weight: 700;
     font-size: 18px;
     line-height: 20px;
@@ -1058,7 +1072,7 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: var(--opacity-brown-2);
   }
 .tooltip{
-  padding: 11px;
+  padding: 11px 0 11px 10px;
   position: relative;
 }
 .tooltip_toggle{
@@ -1085,14 +1099,14 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 20px;
   font-weight: 400;
   text-transform:none;
-  padding: 15px 18px 18px 22px;
+  padding: 22px;
   margin-top: 15px;
   border-radius: 10px;
   width: 256px;
   z-index: 1;
   position: absolute;
   left:50%;
-  transform: translateX(-50%);
+  transform: translateX(-48%);
   display: none;
   }
   .tooltip_toggle:hover + .tooltip_text,
@@ -1114,6 +1128,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
 .button_modal{
+  font-family: inherit;
 font-weight: 700;
 font-size: 20px;
 line-height: 24px;
@@ -1129,9 +1144,7 @@ cursor: pointer;
 
 }
  /*..............DECORATION....................*/
-.disable{
-  display: none;
-}
+
             /*brown*/
 .button_brown:hover{
   background-color: var(--hover-brown);
@@ -1183,6 +1196,10 @@ cursor: pointer;
     outline: 2px solid var(--button-blue);
   }
 }
+.button_transparent:disabled{
+opacity: 0.1;
+cursor: default;
+}
 /*filter_list*/
 .veiw_button:hover{
   outline: 2px solid var(--hover-black);
@@ -1215,6 +1232,11 @@ cursor: pointer;
 .text_decoration:active{
   opacity: 0.3;
 }
+.text_decoration:hover .like_counts,
+.text_decoration:focus .like_counts{
+  background-color: var(--hover-green);
+}
+
       /*select_control*/
 .select_control:hover{
 outline: 2px solid var(--hover-blue);
@@ -1232,6 +1254,9 @@ outline: 2px solid var(--hover-blue);
   .select_control:active{
     outline: 2px solid var(--form-input);
   }
+  .select_control:disabled{
+    outline: none;
+  }
 
 /* control checbox*/
 .control_input:focus .control_mark {
@@ -1241,20 +1266,6 @@ outline: 2px solid var(--hover-blue);
 .control_input:disabled + .control_mark {
   border-color: var(--icon-black);
 }
-/* .range
-.catalog_filter_label:hover{
-  background-color: var(--form-element-1);
-}
-.catalog_filter_label:focus-visible{
-  outline: 3px solid var(--focus-blue);
-}
-.range_toggle:hover {
-  background-color: var(--form-element-1);
-}
-.range_toggle:active,
-.range_toggle:focus {
-  outline: 3px solid var(--focus-blue);
-} */
 /*input*/
 .field:hover,
 .field:focus{
@@ -1267,7 +1278,76 @@ opacity: 0.6;
 .breadcrumbs_link[href$=".html"]:active{
   opacity: 0.3;
   }
+  /*fiter_group*/
+  .catalog_filter_item:hover{
+    opacity: 0.6;
+  }
+  .control:focus-within .control_mark{
+    outline: none;
+    outline: 3px solid var(--icon-blue);
+  }
+  .catalog_filter_item:active{
+    opacity: 0.3;
+  }
 /*filter range input checbox*/
-.catalog_filter_label:hover{
-   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+.catalog_filter_label:focus-within  {
+  outline: 3px solid var(--icon-blue);
+  outline-offset: -3px;
+}
+.catalog_filter_label:active  {
+  outline: 2px solid var(--icon-black);
+  outline-offset: -2px;
+}
+.range_toggle:hover{
+  box-shadow: 0 4px 10px 0 var(--shadow-1);
+}
+.range_toggle:focus-visible{
+outline: none;
+border: 3px solid var(--icon-blue);
+box-shadow: 0 4px 10px 0 var(--shadow-1);
+}
+
+.range_toggle:active{
+  border: 2px solid var(--icon-blue);
+box-shadow: 0 7px 15px 0 var(--shadow-1);
+}
+
+/*modal*/
+.modal_close_button:hover{
+background-color: var(--form-element-1);
+}
+.modal_close_button:focus{
+  background-color: var(--form-element-1);
+  outline: 3px solid var(--icon-blue);
+  }
+  .modal_close_button:active{
+    outline: none;
+    background-color: var(--form-element-1);
+    opacity: 0.3;
+    }
+.date_field:hover{
+  background-color: var(--form-element-1);
+}
+.date_field:focus{
+outline: 3px solid var(--icon-blue);
+}
+.date_field:active{
+  outline: 3px solid var(--icon-black);
+  }
+.button_changes_number:hover::after,
+.button_changes_number:hover::before{
+background-color: var(--icon-black);
+}
+
+
+
+
+
+.disabled_modal{
+  display: none;
+}
+.button_disabled:disabled{
+  background-color:var(--hover-gray) ;
+  cursor:default;
+  pointer-events: none;
 }

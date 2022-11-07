@@ -418,6 +418,7 @@ margin: 0 auto 20px;
  font-weight: 700;
  font-size: 20px;
  line-height: 36px;
+ letter-spacing: -2.5px;
  color: var(--text-white);
  border-radius: 0 4px 4px 0;
  user-select: none;
@@ -606,6 +607,7 @@ margin-top: 56px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  letter-spacing: -1.5px;
   color: var(--text-white);
   border-radius:4px;
   user-select: none;
@@ -685,12 +687,10 @@ border-radius: 4px 0 0 4px;
   width: 45px;
   margin-right: 42px;
   font: inherit;
-  text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
   appearance: textfield;
-  text-align: start;
 }
 .range_input::-webkit-outer-spin-button,
 .range_input::-webkit-inner-spin-button {
@@ -705,7 +705,6 @@ border-radius: 4px 0 0 4px;
 }
 .select_bar{
   display: flex;
-  justify-content: space-between;
   padding: 50px 0 40px;
   align-items: center;
 }
@@ -714,6 +713,8 @@ border-radius: 4px 0 0 4px;
   padding: 0;
 }
 .select_control{
+margin-left: auto;
+margin-right: 70px;
 width: 292px;
 min-height: 49px;
 border-radius: 4px;
@@ -770,7 +771,7 @@ user-select: none;
   line-height: 28px;
   }
   .hotel_card_image{
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   .hotel_card_link{
     font-size: 24px;
@@ -829,8 +830,10 @@ max-width: 140px;
 }
 .stars{
  max-width: 140px;
+ margin: 0;
 }
 .rating{
+  margin: 0;
   font-weight: 400;
   color: var(--text-gray);
   background-color: var(--form-element-2);
@@ -844,6 +847,7 @@ max-width: 140px;
 display: flex;
 align-items: center;
 flex-wrap: wrap;
+margin-bottom: 55px;
 }
 .pagination_item{
   margin-bottom: 8px;
@@ -1059,7 +1063,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .tooltip_toggle{
   border: none;
-  background-color: transparent;
+
   padding: 7px 12px;
   margin: 0;
   border-radius: 50%;
@@ -1084,7 +1088,6 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 15px 18px 18px 22px;
   margin-top: 15px;
   border-radius: 10px;
-  display: block;
   width: 256px;
   z-index: 1;
   position: absolute;
@@ -1189,7 +1192,6 @@ cursor: pointer;
 .veiw_button:focus{
   outline: 2px solid var(--hover-blue);
 }
-
 .veiw_button:active{
   outline: 2px solid var(--hover-black);
 }
@@ -1239,7 +1241,7 @@ outline: 2px solid var(--hover-blue);
 .control_input:disabled + .control_mark {
   border-color: var(--icon-black);
 }
-/* range*/
+/* .range
 .catalog_filter_label:hover{
   background-color: var(--form-element-1);
 }
@@ -1252,4 +1254,20 @@ outline: 2px solid var(--hover-blue);
 .range_toggle:active,
 .range_toggle:focus {
   outline: 3px solid var(--focus-blue);
+} */
+/*input*/
+.field:hover,
+.field:focus{
+background-color: var(--form-element-1);
+}
+/*breadcrums*/
+.breadcrumbs_link[href$=".html"]:hover {
+opacity: 0.6;
+}
+.breadcrumbs_link[href$=".html"]:active{
+  opacity: 0.3;
+  }
+/*filter range input checbox*/
+.catalog_filter_label:hover{
+   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }

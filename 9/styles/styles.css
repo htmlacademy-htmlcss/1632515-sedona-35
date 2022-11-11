@@ -60,6 +60,7 @@ img {
   --form-input:    rgba(63, 94, 114, 1);
   --form-element-1:rgba(229, 229, 229, 1);
   --form-element-2:rgba(242, 242, 242, 1); /*f2f2f2*/
+  --form-element-3:rgba(230, 230, 230, 1); /*e6e6e6*/
   --modal-overlay: rgba(242, 242, 242, 0.8);
 /*icons*/
   --icon-black:rgba(0, 0, 0, 1);
@@ -1289,21 +1290,15 @@ outline: 2px solid var(--hover-blue);
 
                 /*input*/
   .field:focus-visible {
-    background-color: var(--form-element-1);
-    outline: 3px solid var(--icon-blue);
-    outline-offset: -3px;
+    background-color: var(--form-element-3);
   }
    @supports not selector(:focus-visible) {
       .field:focus {
-        background-color: var(--form-element-1);
-        outline: 3px solid var(--icon-blue);
-
+        background-color: var(--form-element-3);
      }
    }
-
-
 .field:hover{
-background-color: var(--form-element-1);
+background-color: var(--form-element-3);
 }
               /*breadcrums*/
 .breadcrumbs_link[href$=".html"]:hover {
@@ -1340,8 +1335,11 @@ opacity: 0.6;
 .catalog_filter_label:focus-within  {
   outline: 3px solid var(--icon-blue);
   outline-offset: -3px;
+  background-color: var(--form-element-3) ;
 }
-
+.catalog_filter_label:hover{
+  background-color: var(--form-element-3);
+}
 .catalog_filter_label:active  {
   outline: 2px solid var(--icon-black);
   outline-offset: -2px;
@@ -1370,35 +1368,37 @@ box-shadow: 0 7px 15px 0 var(--shadow-1);
 
             /*modal*/
 .modal_close_button:focus-visible {
-  background-color: var(--form-element-1);
+  background-color: var(--form-element-3);
   outline: 3px solid var(--icon-blue);
 }
 @supports not selector(:focus-visible) {
   .modal_close_button:focus {
-  background-color: var(--form-element-1);
+  background-color: var(--form-element-3);
   outline: 3px solid var(--icon-blue);
   }
 }
 .modal_close_button:hover{
-background-color: var(--form-element-1);
+background-color: var(--form-element-3);
 }
   .modal_close_button:active{
     outline: none;
-    background-color: var(--form-element-1);
+    background-color: var(--form-element-3);
     opacity: 0.3;
     }
 
 
 .date_field:focus-visible {
   outline: 3px solid var(--icon-blue);
+  background-color: var(--form-element-3);
 }
 @supports not selector(:focus-visible) {
   .date_field:focus {
     outline: 3px solid var(--icon-blue);
+    background-color: var(--form-element-3);
   }
 }
 .date_field:hover{
-  background-color: var(--form-element-1);
+  background-color: var(--form-element-3);
 }
 .date_field:active{
   outline: 3px solid var(--icon-black);
@@ -1407,7 +1407,6 @@ background-color: var(--form-element-1);
     outline: 3px solid var(--icon-blue);
     outline-offset: -3px;
   }
-
 .button_changes_number:focus-visible{
   outline: 3px solid var(--icon-blue);
   outline-offset: -3px;

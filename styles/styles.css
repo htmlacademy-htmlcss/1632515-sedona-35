@@ -660,6 +660,9 @@ margin-top: 56px;
   top: -8px;
   right: -10px;
 }
+.range{
+  margin-left: 4px;
+}
 .range_wrapper_inputs {
   display: flex;
   justify-content: center;
@@ -707,7 +710,7 @@ border-radius: 4px 0 0 4px;
 }
 .select_bar{
   display: flex;
-  padding: 46px 0 40px;
+  padding: 44px 0 40px;
   align-items: center;
 }
 .catalog_search_title{
@@ -859,7 +862,7 @@ max-width: 140px;
 display: flex;
 align-items: center;
 flex-wrap: wrap;
-margin-bottom: 55px;
+margin-bottom: 50px;
 }
 .pagination_item{
   margin-bottom: 8px;
@@ -904,7 +907,7 @@ margin-bottom: 55px;
   width: 100%;
   min-height: 415px;
   background-color: var(--backround-white);
-  padding: 96px 0 104px;
+  padding: 96px 0 108px;
   }
 
 /*.................MODAL...........*/

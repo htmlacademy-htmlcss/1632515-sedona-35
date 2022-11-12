@@ -1318,16 +1318,6 @@ opacity: 0.6;
     opacity: 0.3;
   }
 
-  /* control checbox*/
-
-.control_input:focus-visible .control_mark{
-  outline: 5px solid var(--focus-blue);
-}
-@supports not selector(:focus-visible) {
-  .control_input:focus  .control_mark{
-    outline: 5px solid var(--focus-blue);
-  }
-}
 .control_input:disabled + .control_mark {
   border-color: var(--icon-black);
 }

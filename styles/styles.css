@@ -1269,11 +1269,11 @@ cursor: default;
 }
 
       /*select_control*/
-.class:focus-visible {
+      .select_control:focus-visible {
   outline: 2px solid var(--hover-blue);
 }
 @supports not selector(:focus-visible) {
- 	.class:focus {
+  .select_control:focus {
     outline: 2px solid var(--hover-blue);
   }
 }
@@ -1308,9 +1308,17 @@ opacity: 0.6;
   opacity: 0.3;
   }
                 /*fiter_group*/
-  .control:focus-within .control_mark{
+  /* .control:focus-within*/
+
+  .control_input:focus-visible + .control_mark {
     outline: 3px solid var(--icon-blue);
   }
+
+@supports not selector(:focus-visible) {
+  .control_input:focus-visible + .control_mark {
+    outline: 3px solid var(--icon-blue);
+  }
+}
   .catalog_filter_item:hover{
     opacity: 0.6;
   }

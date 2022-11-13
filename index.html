@@ -44,8 +44,8 @@
             </li>
           </ul>
           <!--nav user-->
-          <ul class="navigation_user list">
-            <div class="box_user_icon">
+          <div class="navigation_user">
+            <ul class="box_user_icon list">
               <li class="navigation_item search">
                 <a class="navigation_link text_decoration link" href="#">
                   <span class="visually_hidden"> поиск. </span>
@@ -83,13 +83,15 @@
                   <span class="like_counts">12</span>
                 </a>
               </li>
-            </div>
-            <li class="button_item">
-              <a class="button_header_link button_brown link" href="#">
-                <span class="navigation_button_title">Хочу сюда! </span>
-              </a>
-            </li>
-          </ul>
+            </ul>
+            <ul>
+              <li class="button_item list">
+                <a class="button_header_link button_brown link" href="#">
+                  <span class="navigation_button_title">Хочу сюда! </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </header>
       <!--INTRO-->
@@ -382,12 +384,12 @@
         </div>
       </footer>
     </div>
-
+    <!-- MODAL-->
     <div class="modal_container disabled_modal">
       <div class="modal modal_search">
         <section class="modal_content">
           <h1 class="modal_title">поиск гостиницы в седоне</h1>
-          <button class="modal_close_button">
+          <button class="modal_close_button" type="button">
             <span class="visually_hidden">Закрыть.</span>
           </button>
           <form
@@ -402,7 +404,7 @@
                 title="Укажите дату"
               >
                 <span class="input_label">дата заезда:</span>
-                <div class="wrapper_field">
+                <span class="wrapper_field">
                   <input
                     type="text"
                     class="date_field field_arrival"
@@ -412,7 +414,7 @@
                     value="27 апреля 2020"
                     required
                   />
-                </div>
+                </span>
               </label>
               <span class="field_message message_error">
                 Мы не можем отправить вас в прошлое.
@@ -421,7 +423,7 @@
             <div class="wrapper_input_block">
               <label for="date_out" class="date_block out" title="Укажите дату">
                 <span class="input_label">дата выезда:</span>
-                <div class="wrapper_field">
+                <span class="wrapper_field">
                   <input
                     type="text"
                     class="date_field field_out"
@@ -429,8 +431,9 @@
                     name="date_out"
                     placeholder="Укажите дату"
                     value="1 сентября 2023"
+                    required
                   />
-                </div>
+                </span>
               </label>
               <span class="field_message">
                 На эти даты есть свободные номера. Пока есть.
@@ -438,9 +441,11 @@
             </div>
 
             <div class="numbers_people">
-              <label for="adult" class="numbers_block adult_numbers">
-                <span class="input_label">взрослые:</span>
-                <div class="select_numbers">
+              <div class="numbers_block">
+                <label for="adult" class="adult_numbers">
+                  <span class="input_label">взрослые:</span>
+                </label>
+                <span class="select_numbers">
                   <button
                     class="button_changes_min button_changes_number"
                     type="button"
@@ -450,8 +455,8 @@
                     </span>
                   </button>
                   <input
-                    type="number"
                     class="numbers_input"
+                    type="number"
                     id="adult"
                     name="adult"
                     value="2"
@@ -465,11 +470,12 @@
                       Кнопка увеличивающая количество взрослых.
                     </span>
                   </button>
-                </div>
-              </label>
-
-              <label for="kids" class="numbers_block kids_numbers">
-                <span class="input_label">дети:</span>
+                </span>
+              </div>
+              <div class="numbers_block">
+                <label for="kids" class="numbers_block kids_numbers">
+                  <span class="input_label">дети:</span>
+                </label>
                 <!-- tooltip -->
                 <span class="tooltip">
                   <button class="tooltip_toggle button_blue" type="button">
@@ -520,7 +526,7 @@
                     </span>
                   </button>
                 </div>
-              </label>
+              </div>
             </div>
 
             <button class="button_modal button_blue" type="submit">

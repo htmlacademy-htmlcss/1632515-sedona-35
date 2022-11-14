@@ -97,6 +97,7 @@ body {
   background-color: var(--form-element-2);
   min-height: 100%;
   margin: 0;
+  word-break: break-word;
 }
 
 .visually_hidden {
@@ -351,6 +352,14 @@ body {
   padding: 103px 85px 121px;
 }
 
+.text_card:nth-child(even) {
+  background-color: var(--backround-second-1);
+}
+
+.text_card:nth-child(odd) {
+  background-color: var(--backround-second-2);
+}
+
 .advantages_title {
   font-size: 24px;
   font-weight: 700;
@@ -391,6 +400,14 @@ body {
   align-items: center;
   text-align: center;
   padding: 80px 85px 81px;
+}
+
+.advantages_item_feature:nth-child(odd) {
+  background-color: var(--backround-white);
+}
+
+.advantages_item_feature:nth-child(even) {
+  background-color: var(--backround-second-1);
 }
 
 .advantages_item_feature .advantages_title,
@@ -1441,12 +1458,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /*text*/
-.class:focus-visible {
+.text_decoration:focus-visible {
   color: var(--opacity-brown);
 }
 
 @supports not selector(:focus-visible) {
-  .class:focus {
+  .text_decoration:focus {
     color: var(--opacity-brown);
   }
 }

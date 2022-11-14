@@ -222,9 +222,9 @@ body {
   position: absolute;
   top: 12px;
   right: 4px;
-  padding: 4px 5px 5px;
-  max-width: 20px;
-  max-height: 20px;
+  padding: 5px 5px 5px 4px;
+  width: 20px;
+  height: 20px;
   border: none;
   border-radius: 50%;
   background-color: var(--pseudo-color-green);

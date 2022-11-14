@@ -44,8 +44,8 @@
             </li>
           </ul>
           <!--nav user-->
-          <ul class="navigation_user list">
-            <div class="box_user_icon">
+          <div class="navigation_user">
+            <ul class="box_user_icon list">
               <li class="navigation_item search">
                 <a class="navigation_link text_decoration link" href="#">
                   <span class="visually_hidden"> поиск. </span>
@@ -83,13 +83,15 @@
                   <span class="like_counts">12</span>
                 </a>
               </li>
-            </div>
-            <li class="button_item">
-              <a class="button_header_link button_brown link" href="#">
-                <span class="navigation_button_title">Хочу сюда! </span>
-              </a>
-            </li>
-          </ul>
+            </ul>
+            <span>
+              <span class="button_item list">
+                <a class="button_header_link button_brown link" href="#">
+                  <span class="navigation_button_title">Хочу сюда! </span>
+                </a>
+              </span>
+            </span>
+          </div>
         </nav>
       </header>
       <!--INTRO-->
@@ -169,6 +171,7 @@
             <!--img card2 bridge-->
             <li class="advantages_item img_card blue">
               <img
+                class="img_bridge"
                 src="img/jpeg/advantage/bridge.jpg"
                 width="800"
                 height="384"
@@ -194,7 +197,9 @@
               />
               <h3 class="advantages_title">Жильё</h3>
               <p class="advantages_description">
-                Рекомендуем пожить в настоящем мотеле,всё как в кино!
+                Рекомендуем пожить <br />
+                в настоящем мотеле, <br />
+                всё как в кино!
               </p>
             </li>
             <li class="advantages_item_feature food">
@@ -206,8 +211,8 @@
               />
               <h3 class="advantages_title">Еда</h3>
               <p class="advantages_description">
-                Всегда заказывайте топовый фирменный бургер, вы не
-                разочаруетесь!
+                Всегда заказывайте <br />
+                топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
             <li class="advantages_item_feature gift">
@@ -219,7 +224,8 @@
               />
               <h3 class="advantages_title">Сувениры</h3>
               <p class="advantages_description">
-                Не только китайского, но и настоящего местного производства!
+                Не только китайского, <br />
+                но и настоящего местного производства!
               </p>
             </li>
           </ul>
@@ -280,6 +286,7 @@
                   href="https://vk.com/htmlacademy"
                   class="footer_item_link link"
                 >
+                <span class="visually_hidden">в контакте. </span>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -300,6 +307,7 @@
                   href="https://t.me/htmlacademy"
                   class="footer_item_link link"
                 >
+                <span class="visually_hidden"> телеграм. </span>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -320,6 +328,7 @@
                   href="https://www.youtube.com/user/htmlacademyru"
                   class="footer_item_link link"
                 >
+                <span class="visually_hidden">youtube. </span>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -343,6 +352,7 @@
               class="footer_contacts_phone text_decoration link"
               href="tel:+78128121212"
             >
+            <span class="visually_hidden"> телефон. </span>
               +7 (812) 812-12-12
             </a>
           </section>
@@ -352,6 +362,7 @@
               href="https://htmlacademy.ru/"
               class="academy_link text_decoration link"
             >
+            <span class="visually_hidden"> сайт HTML Academy. </span>
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -379,12 +390,12 @@
         </div>
       </footer>
     </div>
-
+    <!-- MODAL-->
     <div class="modal_container disabled_modal">
       <div class="modal modal_search">
         <section class="modal_content">
           <h1 class="modal_title">поиск гостиницы в седоне</h1>
-          <button class="modal_close_button">
+          <button class="modal_close_button" type="button">
             <span class="visually_hidden">Закрыть.</span>
           </button>
           <form
@@ -399,7 +410,7 @@
                 title="Укажите дату"
               >
                 <span class="input_label">дата заезда:</span>
-                <div class="wrapper_field">
+                <span class="wrapper_field">
                   <input
                     type="text"
                     class="date_field field_arrival"
@@ -409,7 +420,7 @@
                     value="27 апреля 2020"
                     required
                   />
-                </div>
+                </span>
               </label>
               <span class="field_message message_error">
                 Мы не можем отправить вас в прошлое.
@@ -418,7 +429,7 @@
             <div class="wrapper_input_block">
               <label for="date_out" class="date_block out" title="Укажите дату">
                 <span class="input_label">дата выезда:</span>
-                <div class="wrapper_field">
+                <span class="wrapper_field">
                   <input
                     type="text"
                     class="date_field field_out"
@@ -426,8 +437,9 @@
                     name="date_out"
                     placeholder="Укажите дату"
                     value="1 сентября 2023"
+                    required
                   />
-                </div>
+                </span>
               </label>
               <span class="field_message">
                 На эти даты есть свободные номера. Пока есть.
@@ -435,9 +447,11 @@
             </div>
 
             <div class="numbers_people">
-              <label for="adult" class="numbers_block adult_numbers">
-                <span class="input_label">взрослые:</span>
-                <div class="select_numbers">
+              <div class="numbers_block">
+                <label for="adult" class="adult_numbers">
+                  <span class="input_label">взрослые:</span>
+                </label>
+                <span class="select_numbers">
                   <button
                     class="button_changes_min button_changes_number"
                     type="button"
@@ -447,8 +461,8 @@
                     </span>
                   </button>
                   <input
-                    type="number"
                     class="numbers_input"
+                    type="number"
                     id="adult"
                     name="adult"
                     value="2"
@@ -462,11 +476,12 @@
                       Кнопка увеличивающая количество взрослых.
                     </span>
                   </button>
-                </div>
-              </label>
-
-              <label for="kids" class="numbers_block kids_numbers">
-                <span class="input_label">дети:</span>
+                </span>
+              </div>
+              <div class="numbers_block">
+                <label for="kids" class="numbers_block kids_numbers">
+                  <span class="input_label">дети:</span>
+                </label>
                 <!-- tooltip -->
                 <span class="tooltip">
                   <button class="tooltip_toggle button_blue" type="button">
@@ -517,7 +532,7 @@
                     </span>
                   </button>
                 </div>
-              </label>
+              </div>
             </div>
 
             <button class="button_modal button_blue" type="submit">
